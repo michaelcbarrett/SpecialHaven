@@ -1,2 +1,2 @@
 # SpecialHaven
-# SpecialHaven
+SpecialHaven is a one-stop shop for all things special needs. It is a website which aggregates social and community content in order to help people stay up-to-date with current events in the special needs community. It gives caretakers of special needs people a supportive community where they can connect with one another, give and receive advice, and talk about their challenges. The platform also facilitates the discovery of experts, non-profits, and businesses and streamlines communication with them.
