@@ -18,7 +18,7 @@ class User < ActiveRecord::Base
       user.password = Devise.friendly_token[0,20]
       user.first_name = name_array(auth.info.name)[0]
       user.last_name = name_array(auth.info.name)[1]
-      # user.image = auth.info.image #TODO add image to user model
+      user.photo = auth.info.image
     end
   end
 
