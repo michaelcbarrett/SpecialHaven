@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151224010540) do
+ActiveRecord::Schema.define(version: 20151224173822) do
 
   create_table "event_posts", force: :cascade do |t|
     t.datetime "event_start_time"
@@ -62,12 +62,13 @@ ActiveRecord::Schema.define(version: 20151224010540) do
     t.string   "last_sign_in_ip"
     t.datetime "created_at",                          null: false
     t.datetime "updated_at",                          null: false
-    t.string   "type"
+    t.string   "user_type"
     t.string   "first_name"
     t.string   "last_name"
     t.string   "zip_code"
     t.string   "provider"
     t.string   "uid"
+    t.string   "photo"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true
