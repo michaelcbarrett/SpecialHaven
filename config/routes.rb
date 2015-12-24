@@ -1,4 +1,10 @@
 Rails.application.routes.draw do
+  resources :link_posts
+  resources :video_posts
+  resources :event_posts
+  resources :image_posts
+  resources :text_posts
+  resources :posts
   get 'pages/home'
   root 'pages#home'
 
