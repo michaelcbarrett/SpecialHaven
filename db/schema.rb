@@ -14,8 +14,11 @@
 ActiveRecord::Schema.define(version: 20151224010540) do
 
   create_table "event_posts", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "event_start_time"
+    t.datetime "event_end_time"
+    t.string   "location"
+    t.datetime "created_at",       null: false
+    t.datetime "updated_at",       null: false
   end
 
   create_table "image_posts", force: :cascade do |t|
@@ -63,10 +66,14 @@ ActiveRecord::Schema.define(version: 20151224010540) do
     t.string   "first_name"
     t.string   "last_name"
     t.string   "zip_code"
+    t.string   "provider"
+    t.string   "uid"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true
+  add_index "users", ["provider"], name: "index_users_on_provider"
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
+  add_index "users", ["uid"], name: "index_users_on_uid"
 
   create_table "video_posts", force: :cascade do |t|
     t.datetime "created_at", null: false
