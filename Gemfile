@@ -23,9 +23,13 @@ gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
 
+# Allow login using Devise and OmniAuth
 gem 'devise', '3.5.3'
+gem 'omniauth'
+gem 'omniauth-facebook'
 # gem to allow multiple table inheritance
 gem 'active_record-acts_as', '1.0.7'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
