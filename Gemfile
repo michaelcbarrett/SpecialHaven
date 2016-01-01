@@ -29,6 +29,8 @@ gem 'omniauth'
 gem 'omniauth-facebook'
 # gem to allow multiple table inheritance
 gem 'active_record-acts_as', '1.0.7'
+# gem to allow friending
+gem 'has_friendship'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
