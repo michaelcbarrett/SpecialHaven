@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151224173822) do
+ActiveRecord::Schema.define(version: 20160101194724) do
 
   create_table "event_posts", force: :cascade do |t|
     t.datetime "event_start_time"
@@ -19,6 +19,16 @@ ActiveRecord::Schema.define(version: 20151224173822) do
     t.string   "location"
     t.datetime "created_at",       null: false
     t.datetime "updated_at",       null: false
+  end
+
+  create_table "friendships", force: :cascade do |t|
+    t.integer  "friendable_id"
+    t.string   "friendable_type"
+    t.integer  "friend_id"
+    t.string   "status"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "blocker_id"
   end
 
   create_table "image_posts", force: :cascade do |t|

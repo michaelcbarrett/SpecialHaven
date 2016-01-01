@@ -11,6 +11,7 @@ class User < ActiveRecord::Base
   has_many :image_posts, dependent: :destroy
   has_many :link_posts, dependent: :destroy
   has_many :video_posts, dependent: :destroy
+  has_friendship
 
   def self.from_omniauth(auth)
     where(provider: auth.provider, uid: auth.uid).first_or_create do |user|
