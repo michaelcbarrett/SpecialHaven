@@ -1,2 +1,8 @@
-<h1>Home Page</h1>
-<p>Welcome! You've successfully logged in.</p>
+<div class="center jumbotron">
+  <h2>A one-stop shop for all things special needs.</h2>
+  <div class="text-center">
+    <%= link_to "Sign up", new_user_registration_path, class: "btn btn-lg btn-primary btn-default" %>
+    <br><br>
+    <%= link_to "Log in with Facebook", user_omniauth_authorize_path(:facebook), class: "btn btn-lg btn-primary fb-btn" %>
+  </div>
+</div>
