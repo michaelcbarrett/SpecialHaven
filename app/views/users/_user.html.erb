@@ -1,0 +1,5 @@
+<li class="list-group-item">
+<img src="<%= user.photo %>" alt="<%= "#{user.first_name} #{user.last_name}" %>" width="80" height="80">
+<%= link_to "#{user.first_name} #{user.last_name}", user %><br>
+<%= button_to "Request Friend", "/users/#{user.id}/request_friend"%>
+</li>

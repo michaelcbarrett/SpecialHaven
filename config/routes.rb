@@ -5,7 +5,9 @@ Rails.application.routes.draw do
   resources :image_posts
   resources :text_posts
   resources :posts
-  get 'pages/home'
+  resources :users
+  get '/home' => 'pages#home'
+  match '/users/:id/request_friend' => 'users#request_friend', via: :post
   root 'pages#home'
 
   devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks" }
