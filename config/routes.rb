@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks" }
   resources :link_posts
   resources :video_posts
   resources :event_posts
@@ -6,11 +7,12 @@ Rails.application.routes.draw do
   resources :text_posts
   resources :posts
   resources :users
+
   get '/home' => 'pages#home'
   match '/users/:id/request_friend' => 'users#request_friend', via: :post
   root 'pages#home'
 
-  devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks" }
+  
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
