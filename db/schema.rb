@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160101194724) do
+ActiveRecord::Schema.define(version: 20160103224445) do
 
   create_table "event_posts", force: :cascade do |t|
     t.datetime "event_start_time"
@@ -34,6 +34,7 @@ ActiveRecord::Schema.define(version: 20160101194724) do
   create_table "image_posts", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string   "image_url"
   end
 
   create_table "link_posts", force: :cascade do |t|
