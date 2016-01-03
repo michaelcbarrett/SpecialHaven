@@ -33,7 +33,8 @@ gem 'omniauth-facebook'
 gem 'active_record-acts_as', '1.0.7'
 # gem to allow friending
 gem 'has_friendship'
-
+# gem for pagination
+gem 'will_paginate', '~> 3.0.6'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
