@@ -1,4 +1,4 @@
 class ImagePost < ActiveRecord::Base
 	acts_as :post
-	validates :url, presence: true 
+	validates :image_url, presence: true 
 end
