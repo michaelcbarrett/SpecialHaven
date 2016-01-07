@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'link_posts/new'
+
   devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks" }
   resources :link_posts
   resources :video_posts
