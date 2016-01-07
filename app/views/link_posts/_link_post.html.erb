@@ -1,0 +1,13 @@
+<li class="timeline-post">
+<span class="post-timestamp">
+<%=link_post.created_at.strftime("%m/%d/%y")%><br>
+<%=link_post.created_at.strftime("%I:%M %p")%>
+</span>
+<span class="post-main">
+<a href="<%=link_post.url%>"><span class="post-title"><%=link_post.title%></span></a>
+<span class="link-url"><%=link_post.url%></span>
+<span class="post-body"><%=link_post.body%></span>
+</span>
+
+
+</li>

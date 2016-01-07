@@ -11,6 +11,7 @@ Rails.application.routes.draw do
   resources :users
 
   get '/home' => 'pages#home'
+  get '/timeline' => 'pages#timeline'
   match '/users/:id/request_friend' => 'users#request_friend', via: :post
   root 'pages#home'
 

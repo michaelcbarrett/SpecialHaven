@@ -1,0 +1,14 @@
+<li class="timeline-post">
+<span class="post-timestamp">
+<%=event_post.created_at.strftime("%m/%d/%y")%><br>
+<%=event_post.created_at.strftime("%I:%M %p")%>
+</span>
+
+<span class="post-main">
+<a href="/event_posts/<%=event_post.id%>">
+<span class="post-title"><%=event_post.title%></span>
+</a>
+<span class="event-start-time"><b><%=event_post.event_start_time.strftime("%A, %b %e, %l:%M %p")%></b></span>
+<span class="post-body"><%=event_post.body%></span>
+</span>
+</li>

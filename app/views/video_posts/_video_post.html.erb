@@ -1,0 +1,10 @@
+<li class="timeline-post">
+<span class="post-timestamp">
+<%=video_post.created_at.strftime("%m/%d/%y")%><br>
+<%=video_post.created_at.strftime("%I:%M %p")%>
+</span>
+<span class="post-main"><a href="/video_posts/<%=video_post.id%>"><span class="post-title"><%=video_post.title%></span></a>
+<span class="post-body"><%=video_post.body%></span>
+</span>
+
+</li>
