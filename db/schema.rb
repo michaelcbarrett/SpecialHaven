@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160103224445) do
+ActiveRecord::Schema.define(version: 20160107164324) do
 
   create_table "event_posts", force: :cascade do |t|
     t.datetime "event_start_time"
@@ -40,6 +40,7 @@ ActiveRecord::Schema.define(version: 20160103224445) do
   create_table "link_posts", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string   "url"
   end
 
   create_table "posts", force: :cascade do |t|
@@ -90,6 +91,7 @@ ActiveRecord::Schema.define(version: 20160103224445) do
   create_table "video_posts", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string   "url"
   end
 
 end
