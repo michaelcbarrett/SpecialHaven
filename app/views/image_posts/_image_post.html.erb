@@ -7,6 +7,13 @@
 <span class="post-main"><a href="/image_posts/<%=image_post.id%>"><span class="post-title"><%=image_post.title%></span></a>
 <img src="<%=image_post.image_url%>" class="post-image" width="60" height="60">
 <span class="post-body"><%=image_post.body%></span>
+<% if image_post.liked_by?(current_user) %>
+<% icon = "<i class='glyphicon glyphicon-heart like-button liked' id='heart-icon-#{image_post.acting_as.id}'></i>" %>
+<% else %>
+<% icon = "<i class='glyphicon glyphicon-heart like-button not-liked' id='heart-icon-#{image_post.acting_as.id}'></i>" %>
+<% end %>
+<%= link_to raw(icon), post_like_path(image_post.acting_as), remote: true, method: :put, class: "like-button"%>
+<small id="like-count-<%=image_post.acting_as.id%>"><%=image_post.liked_by.length%></small>
 </span>
 
 </li>

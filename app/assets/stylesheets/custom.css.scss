@@ -185,6 +185,8 @@ input {
 
 /* timeline */
 
+
+
 .timeline {
   list-style: none;
   padding: 0;
@@ -216,5 +218,20 @@ input {
     -webkit-flex: 1;
             flex: 1;
   }
+}
+
+/* like button */
+
+a.like-button{
+  height: 14px;
+  width: 14px;
+}
+
+.liked {
+  color: rgba(255, 0, 0, 1);
+}
+
+.not-liked {
+  color: rgba(255, 0, 0, 0.3);
 }
 
