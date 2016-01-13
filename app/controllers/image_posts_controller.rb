@@ -3,12 +3,16 @@ class ImagePostsController < ApplicationController
   	@post = current_user.image_posts.new
   end
 
+  def show
+    @post = ImagePost.find(params[:id])
+  end
+
   def create
   	@post = current_user.image_posts.new(image_post_params)
 		@post.user = current_user
 		if @post.save
 			flash[:notice] = "Post created successfully."
-			redirect_to :back
+			redirect_to '/timeline'
 		else
 			flash[:notice] = "Please try posting again. Ensure all fields are filled."
 			redirect_to :back

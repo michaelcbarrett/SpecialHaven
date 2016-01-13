@@ -1,0 +1,12 @@
+<li class="timeline-post">
+<span class="post-timestamp">
+<%=image_post.created_at.strftime("%m/%d/%y")%><br>
+<%=image_post.created_at.strftime("%I:%M %p")%>
+</span>
+
+<span class="post-main"><a href="/image_posts/<%=image_post.id%>"><span class="post-title"><%=image_post.title%></span></a>
+<img src="<%=image_post.image_url%>" class="post-image" width="60" height="60">
+<span class="post-body"><%=image_post.body%></span>
+</span>
+
+</li>

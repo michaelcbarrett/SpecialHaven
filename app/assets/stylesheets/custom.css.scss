@@ -181,3 +181,40 @@ input {
     color: #468847;
     text-align: left;
  }
+
+
+/* timeline */
+
+.timeline {
+  list-style: none;
+  padding: 0;
+
+    .timeline-post {
+      display: -webkit-flex;
+      display: flex;
+      padding: 10px;
+      border-bottom: 1px solid #D0D0D0;
+    }
+
+  .post-timestamp {
+    flex: 1;
+    max-width: 70px;
+    }
+  .post-main {
+    flex: 4;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+  }
+
+  .post-title {
+    flex: 1;
+  }
+
+  .post-body {
+    -webkit-flex: 1;
+            flex: 1;
+  }
+}
+

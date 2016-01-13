@@ -1,0 +1,13 @@
+<li class="timeline-post">
+<span class="post-timestamp">
+<%=text_post.created_at.strftime("%m/%d/%y")%><br>
+<%=text_post.created_at.strftime("%I:%M %p")%>
+</span>
+
+<span class="post-main">
+<span class="post-title"><a href="/text_posts/<%=text_post.id%>"><span class="post-title"><%=text_post.title%></span></a></span>
+<span class="post-author">by <%="#{@users.find(text_post.user_id).first_name} #{@users.find(text_post.user_id).last_name}"%></span>
+<span class="post-body"><%=text_post.body%></span>
+</span>
+
+</li>
