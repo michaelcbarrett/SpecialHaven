@@ -11,6 +11,8 @@ class User < ActiveRecord::Base
   has_many :image_posts, dependent: :destroy
   has_many :link_posts, dependent: :destroy
   has_many :video_posts, dependent: :destroy
+  has_many :likes
+  has_many :liked_posts, through: :likes, source: :post
   has_friendship
 
   def self.from_omniauth(auth)

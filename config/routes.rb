@@ -7,7 +7,9 @@ Rails.application.routes.draw do
   resources :event_posts
   resources :image_posts
   resources :text_posts
-  resources :posts
+  resources :posts do
+    put 'like'
+  end
   resources :users
 
   get '/home' => 'pages#home'
