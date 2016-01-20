@@ -5,6 +5,8 @@
   </div>
 </div>
 </div><hr>
+<div class="row">
+<div class="col-md-9">
 <ul class="timeline">
 <% @posts.reverse.each do |post| %>
 
@@ -12,4 +14,13 @@
 <% end %>
 
 </ul>
+</div>
+<div class="col-md-3">
+<%= button_to "Create Text Post", new_text_post_path, method: :get%>
+<%= button_to "Create Event", new_event_post_path, method: :get%>
+<%= button_to "Share Link", new_link_post_path, method: :get%>
+<%= button_to "Share Image", new_image_post_path, method: :get%>
+<%= button_to "Share Video", new_video_post_path, method: :get%>
+</div>
+</div>
 
