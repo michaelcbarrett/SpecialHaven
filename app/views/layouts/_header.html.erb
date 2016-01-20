@@ -9,6 +9,9 @@
         <li><%= link_to "Log In", new_user_session_path %></li>
         <li><%= link_to "Log in with Facebook", user_omniauth_authorize_path(:facebook) %></li>
         <% else %>
+        <li><%= link_to "Timeline", controller: "pages", action: "timeline"%></li>
+        <li><%= link_to "Find Friends", controller: "users", action: "index"%></li>
+        <li><%= link_to "Your Profile", controller: "users", action: "show", id: current_user.id %></li>
         <li><%= link_to "Log Out", destroy_user_session_path, :method => 'delete'%></li>
         <% end %>
       </ul>
