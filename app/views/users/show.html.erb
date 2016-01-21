@@ -1,0 +1,10 @@
+<h1><%= "#{@user.first_name} #{@user.last_name}"%></h1>
+<img src="<%= @user.photo %>" alt="User Profile Picture" width="100" height="100">
+<p>Email: <%=@user.email%></p>
+<p>Role: <%=@user.user_type%></p>
+<p>Posts:</p>
+<ul class="timeline">
+<% @user.posts.reverse.each do |post| %>
+<%= render post.specific %>
+<% end %>
+</ul>

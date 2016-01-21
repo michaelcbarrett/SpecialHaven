@@ -6,7 +6,7 @@
 
 <span class="post-main">
 <span class="post-title"><a href="/text_posts/<%=text_post.id%>"><span class="post-title"><%=text_post.title%></span></a></span>
-<span class="post-author">by <%="#{@users.find(text_post.user_id).first_name} #{@users.find(text_post.user_id).last_name}"%></span>
+<span class="post-author">by <%="#{text_post.acting_as.user.first_name} #{text_post.acting_as.user.last_name}"%></span>
 <span class="post-body"><%=text_post.body%></span>
 <% if text_post.liked_by?(current_user) %>
 <% icon = "<i class='glyphicon glyphicon-heart like-button liked' id='heart-icon-#{text_post.acting_as.id}'></i>" %>
