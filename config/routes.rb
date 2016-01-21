@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   get 'link_posts/new'
 
-  devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks" }
+  devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks", registrations: 'registrations' }
   resources :link_posts
   resources :video_posts
   resources :event_posts
