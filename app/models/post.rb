@@ -6,6 +6,9 @@ class Post < ActiveRecord::Base
   validates :user_id, presence: true
   has_many :likes
   has_many :liked_by, through: :likes, source: :user
+  acts_as_taggable
+  
+
 
   def liked_by?(user)
   	Like.exists?(user: user, post: self)
