@@ -16,6 +16,7 @@ Rails.application.routes.draw do
   get '/timeline' => 'pages#timeline'
   match '/users/:id/request_friend' => 'users#request_friend', via: :post
   root 'pages#timeline'
+  match '/:tag' => 'pages#timeline', via: :get
 
   
 
