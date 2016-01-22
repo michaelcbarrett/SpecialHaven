@@ -41,6 +41,9 @@ gem 'will_paginate', '~> 3.0.6'
 # gem that adds tagging 
 gem 'acts-as-taggable-on', '~> 3.4'
 
+# Select2 plugin
+gem "select2-rails"
+
 # Use Unicorn as the app server
 # gem 'unicorn'
 
