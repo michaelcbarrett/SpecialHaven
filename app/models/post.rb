@@ -14,4 +14,8 @@ class Post < ActiveRecord::Base
   	Like.exists?(user: user, post: self)
   end
 
+  def favorites
+    self.liked_by.length
+  end
+
 end
