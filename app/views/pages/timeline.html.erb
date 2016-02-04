@@ -7,6 +7,44 @@
 </div><hr>
 <div class="row">
 <div class="col-md-9">
+
+<p>
+  <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#filterOptions" aria-expanded="false" aria-controls="filterOptions">
+    Filter <span class="caret"></span></i>
+  </button>
+</p>
+
+<div class="collapse" id="filterOptions">
+  <div class="container-fluid">
+  <div class="row">
+  <div class="col-md-3">
+  		<ul class="list-unstyled list-group">
+  		<li><b>Sort by</b></li>
+  		<%if params[:sort_by] == "recent"%>
+  		<li><%=link_to "Top", params.merge(sort_by: "top")%></li>
+  		<li class="text-muted">Recent</li>
+  		<%else%>
+  		<li class="text-muted">Top</li>
+  		<li><%=link_to "Recent", params.merge(sort_by: "recent")%></li>
+  		<%end%>
+  		</ul>
+   </div>
+     <div class="col-md-3">
+  		<ul class="list-unstyled list-group">
+  		<li><b>Type</b></li>
+  		<% ["Text","Link","Image","Video","Event"].each do |type|%>
+  		<%if params[:filter] == "#{type}"%>
+  		<li><b><%=link_to "#{type} (remove filter)", (params.except(:filter))%></b></li>
+  		<% else %>
+  		<li><%=link_to "#{type}", (params.merge(:filter => "#{type}"))%></li>
+  		<% end %>
+  		<% end %>
+  		</ul>
+   </div>
+   </div>
+  </div>
+</div>
+
 <ul class="timeline">
 <% @posts.reverse.each do |post| %>
 
