@@ -3,5 +3,6 @@
 <%= f.text_field :title%><br>
 <%= f.label :body %><br>
 <%= f.text_area :body %><br>
+<%= select_tag :tag_list, options_for_select(@tag_options), id: "tag_list", multiple: true %><br><br>
 <%= f.submit "Create Post" %>
 <% end %>

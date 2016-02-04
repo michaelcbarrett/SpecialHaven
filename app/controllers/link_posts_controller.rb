@@ -4,6 +4,7 @@ require 'uri'
 
   def new
   	@post = current_user.link_posts.new
+    @tag_options = Post.tag_options
   end
 
   def show
@@ -21,6 +22,7 @@ require 'uri'
 
   	@post = LinkPost.new(link_post_params.merge(url: url))
 		@post.user = current_user
+    @post.tag_list.add(params[:tag_list])
 		if @post.save
 			flash[:notice] = "Post created successfully."
 			redirect_to '/timeline'

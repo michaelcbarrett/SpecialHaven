@@ -17,5 +17,15 @@ class Post < ActiveRecord::Base
   def favorites
     self.liked_by.length
   end
+  
+  def self.tag_options
+   [["Autism", "autism"],
+    ["ADHD", "adhd"],
+    ["Cerebral Palsy", "cerebral_palsy"],
+    ["Dyslexia", "dyslexia"],
+    ["Epilepsy", "epilepsy"],
+    ["Fragile X Syndrome", "fragile_x_syndrome"],
+    ]
+  end
 
 end

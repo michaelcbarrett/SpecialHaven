@@ -2,6 +2,7 @@ class EventPostsController < ApplicationController
 
   def new
   	@post = current_user.event_posts.new
+    @tag_options = Post.tag_options
   end
 
   def show
@@ -11,6 +12,7 @@ class EventPostsController < ApplicationController
   def create
   	@post = EventPost.new(event_post_params)
 		@post.user = current_user
+    @post.tag_list.add(params[:tag_list])
 		if @post.save
 			flash[:notice] = "Post created successfully."
 			redirect_to '/timeline'
