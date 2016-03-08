@@ -40,7 +40,7 @@ gem 'will_paginate', '~> 3.0.6'
 
 # gem that adds tagging 
 gem 'acts-as-taggable-on', '~> 3.4'
-
+ gem 'pg'
 # Select2 plugin
 gem "select2-rails"
 
@@ -53,11 +53,10 @@ gem "select2-rails"
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
-  gem 'sqlite3'
 end
 
 group :production do
-  gem 'pg'
+
 end
 
 group :development do
