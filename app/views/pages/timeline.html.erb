@@ -1,64 +1,293 @@
-<div class="container-fluid">
-<div class="jumbotron-fluid">
-  <div class="container">
-    <h1 class="display-3">timeline</h1>
-  </div>
-</div>
-</div><hr>
-<div class="row">
-<div class="col-md-9">
 
-<p>
-  <button ia-controls="filterOptions">
-    Filter <span class="caret"></span></i>
-  </button>
-</p>
+<body>
 
-<div class="collapse" id="filterOptions">
-  <div class="container-fluid">
-  <div class="row">
-  <div class="col-md-3">
-  		<ul class="list-unstyled list-group">
-  		<li><b>Sort by</b></li>
-  		<%if params[:sort_by] == "recent"%>
-  		<li><%=link_to "Top", params.merge(sort_by: "top")%></li>
-  		<li class="text-muted">Recent</li>
-  		<%else%>
-  		<li class="text-muted">Top</li>
-  		<li><%=link_to "Recent", params.merge(sort_by: "recent")%></li>
-  		<%end%>
-  		</ul>
-   </div>
-     <div class="col-md-3">
-  		<ul class="list-unstyled list-group">
-  		<li><b>Type</b></li>
-  		<% ["Text","Link","Image","Video","Event"].each do |type|%>
-  		<%if params[:filter] == "#{type}"%>
-  		<li><b><%=link_to "#{type} (remove filter)", (params.except(:filter))%></b></li>
-  		<% else %>
-  		<li><%=link_to "#{type}", (params.merge(:filter => "#{type}"))%></li>
-  		<% end %>
-  		<% end %>
-  		</ul>
-   </div>
-   </div>
-  </div>
-</div>
+<header>
+    <div class="containerPage mobileMargin">
+        <span class="floatLeft"><img class="logo" src="http://i.imgur.com/BZIQF3I.png" /></span>
+        <span class="floatRight"><button class="postButton">NEW POST</button> <img class="profilePic" src="http://i.imgur.com/BcMWkDq.jpg" />
+    </div>
+</header>
 
-<ul class="timeline">
-<% @posts.reverse.each do |post| %>
+<div class="navSpacing"></div>
 
-<%= render post.specific%>
-<% end %>
+<div class="containerPage">
 
-</ul>
-</div>
-<div class="col-md-3">
-<%= button_to "Create Text Post", new_text_post_path, method: :get%>
-<%= button_to "Create Event", new_event_post_path, method: :get%>
-<%= button_to "Share Link", new_link_post_path, method: :get%>
-<%= button_to "Share Image", new_image_post_path, method: :get%>
-<%= button_to "Share Video", new_video_post_path, method: :get%>
-</div>
+    <div class="section group">
+
+        <div class="col span_9_of_12">
+            <div class="section group">
+                <div class="col span_12_of_12 midGrayBg bannerBox one1">
+                    <div class="bannerBoxOverlay">
+                        <div class="container">
+                            <span><span class="details"><span class="user floatLeft"><img class="user" src="http://i.imgur.com/BcMWkDq.jpg" /><span class="timestamp midGray"> Feb. 12, 2016 @ 9:30AM</span></span></span><span class="tag floatRight autism">/AUTISM</span></span>
+                            <div class="bannerBoxSpacing"></div>
+                            <h1 class="white">This is a test title of a big banner box post. Just testing this title, ya know?</h1>
+                            <h2 class="midGray">This is an example of a caption. I’m trying to include everything possible in this design. This is an ex- ample of a caption. Everything possible in this design. Everything possible in this design. I’m trying to include everything possible.This is an example of a caption. Everything possible in this design. This is an example of a caption. I’m trying to include everything possible in this design. This is an ex- ample of a caption. Everything possible in this design. Everything possible in this design. I’m trying to include everything possible.   This is an example of a caption. Everything possible in this design.</h2>
+                            <a href="" class="readMore underline">Continue reading &#8594;</a>
+                            <hr>
+                            <span class="details"><span class="favorite floatLeft"><img class="like" src="http://i.imgur.com/miqgxes.png" /></span><span class="comment floatLeft"><img class="comment" src="http://i.imgur.com/Swurq8A.png" /></span><span class="floatRight"><img class="option optionOne1" src="http://i.imgur.com/P1Q9FCF.png" /><img class="option optionTwo1" src="http://i.imgur.com/VRYy3Zg.png" /><img class="option optionThree1" src="http://i.imgur.com/VRYy3Zg.png" /><img class="option optionFour1" src="http://i.imgur.com/VRYy3Zg.png" /></span></span>
+                            <br>
+                        </div>
+                    </div>
+                </div>
+                <div class="col span_12_of_12 midGrayBg bannerBox two1 noMargin bottomMargin">
+                    <div class="bannerBoxOverlay">
+                        <div class="container">
+                            <span><span class="details"><span class="user floatLeft"><img class="user" src="http://i.imgur.com/BcMWkDq.jpg" /><span class="timestamp midGray"> Feb. 12, 2016 @ 9:30AM</span></span></span><span class="tag floatRight autism">/AUTISM</span></span>
+                            <div class="bannerBoxSpacing"></div>
+                            <h1 class="white">2 is a test title of a big banner box post. Just testing this title, ya know?</h1>
+                            <h2 class="midGray">This is an example of a caption. I’m trying to include everything possible in this design. This is an ex- ample of a caption. Everything possible in this design. Everything possible in this design. I’m trying to include everything possible.This is an example of a caption. Everything possible in this design. This is an example of a caption. I’m trying to include everything possible in this design. This is an ex- ample of a caption. Everything possible in this design. Everything possible in this design. I’m trying to include everything possible.   This is an example of a caption. Everything possible in this design.</h2>
+                            <a href="" class="readMore underline">Continue reading &#8594;</a>
+                            <hr>
+                            <span class="details"><span class="favorite floatLeft"><img class="like" src="http://i.imgur.com/miqgxes.png" /></span><span class="comment floatLeft"><img class="comment" src="http://i.imgur.com/Swurq8A.png" /></span><span class="floatRight"><img class="option optionOne1" src="http://i.imgur.com/VRYy3Zg.png" /><img class="option optionTwo1" src="http://i.imgur.com/P1Q9FCF.png" /><img class="option optionThree1" src="http://i.imgur.com/VRYy3Zg.png" /><img class="option optionFour1" src="http://i.imgur.com/VRYy3Zg.png" /></span></span>
+                            <br>
+                        </div>
+                    </div>
+                </div>
+                <div class="col span_12_of_12 midGrayBg bannerBox three1 noMargin bottomMargin">
+                    <div class="bannerBoxOverlay">
+                        <div class="container">
+                            <span><span class="details"><span class="user floatLeft"><img class="user" src="http://i.imgur.com/BcMWkDq.jpg" /><span class="timestamp midGray"> Feb. 12, 2016 @ 9:30AM</span></span></span><span class="tag floatRight autism">/AUTISM</span></span>
+                            <div class="bannerBoxSpacing"></div>
+                            <h1 class="white">3 is a test title of a big banner box post. Just testing this title, ya know?</h1>
+                            <h2 class="midGray">This is an example of a caption. I’m trying to include everything possible in this design. This is an ex- ample of a caption. Everything possible in this design. Everything possible in this design. I’m trying to include everything possible.This is an example of a caption. Everything possible in this design. This is an example of a caption. I’m trying to include everything possible in this design. This is an ex- ample of a caption. Everything possible in this design. Everything possible in this design. I’m trying to include everything possible.   This is an example of a caption. Everything possible in this design.</h2>
+                            <a href="" class="readMore underline">Continue reading &#8594;</a>
+                            <hr>
+                            <span class="details"><span class="favorite floatLeft"><img class="like" src="http://i.imgur.com/miqgxes.png" /></span><span class="comment floatLeft"><img class="comment" src="http://i.imgur.com/Swurq8A.png" /></span><span class="floatRight"><img class="option optionOne1" src="http://i.imgur.com/VRYy3Zg.png" /><img class="option optionTwo1" src="http://i.imgur.com/VRYy3Zg.png" /><img class="option optionThree1" src="http://i.imgur.com/P1Q9FCF.png" /><img class="option optionFour1" src="http://i.imgur.com/VRYy3Zg.png" /></span></span>
+                            <br>
+                        </div>
+                    </div>
+                </div>
+                <div class="col span_12_of_12 midGrayBg bannerBox four1 noMargin bottomMargin">
+                    <div class="bannerBoxOverlay">
+                        <div class="container">
+                            <span><span class="details"><span class="user floatLeft"><img class="user" src="http://i.imgur.com/BcMWkDq.jpg" /><span class="timestamp midGray"> Feb. 12, 2016 @ 9:30AM</span></span></span><span class="tag floatRight autism">/AUTISM</span></span>
+                            <div class="bannerBoxSpacing"></div>
+                            <h1 class="white">4 is a test title of a big banner box post. Just testing this title, ya know?</h1>
+                            <h2 class="midGray">This is an example of a caption. I’m trying to include everything possible in this design. This is an ex- ample of a caption. Everything possible in this design. Everything possible in this design. I’m trying to include everything possible.This is an example of a caption. Everything possible in this design. This is an example of a caption. I’m trying to include everything possible in this design. This is an ex- ample of a caption. Everything possible in this design. Everything possible in this design. I’m trying to include everything possible.   This is an example of a caption. Everything possible in this design.</h2>
+                            <a href="" class="readMore underline">Continue reading &#8594;</a>
+                            <hr>
+                            <span class="details"><span class="favorite floatLeft"><img class="like" src="http://i.imgur.com/miqgxes.png" /></span><span class="comment floatLeft"><img class="comment" src="http://i.imgur.com/Swurq8A.png" /></span><span class="floatRight"><img class="option optionOne1" src="http://i.imgur.com/VRYy3Zg.png" /><img class="option optionTwo1" src="http://i.imgur.com/VRYy3Zg.png" /><img class="option optionThree1" src="http://i.imgur.com/VRYy3Zg.png" /><img class="option optionFour1" src="http://i.imgur.com/P1Q9FCF.png" /></span></span>
+                            <br>
+                        </div>
+                    </div>
+                </div>
+
+                
+                <div class="section group">
+                    <div class="col span_4_of_12 ">
+                        <div class="section group">
+                            <div class="col span_12_of_12 lightGrayBg imageBox textCenter">
+                                <img class="post" src="http://i.imgur.com/457s9SD.png" />
+                                <div class="container">
+                                    <span class="details"><span class="social floatLeft"><img class="like" src="http://i.imgur.com/miqgxes.png" /><span class="comment"><img class="comment" src="http://i.imgur.com/CuI03R5.png" /></span></span><span class="favorite"><img class="user" src="http://i.imgur.com/BcMWkDq.jpg" /></span><span class="tag"></span><span class="tag floatRight autism">/AUTISM</span></span></span>
+                                </div>
+                            </div>   
+                        </div>
+                        <div class="section group">
+                            <div class="col span_12_of_12 lightGrayBg sub textBox">
+                                <div class="container">         
+                                    <span class="details"><span class="user floatLeft"><img class="user" src="http://i.imgur.com/BcMWkDq.jpg" /></span><span class="tag floatRight autism">/AUTISM</span></span></span>
+                                    <br>
+                                    <h3 class="black">Mitchell Bregman is the title of this video. Just a test run to see how this title will fit in the shit...</h3>
+                                    <h4 class="darkGray">This is an example of a caption. I’m trying to include everything possible in this design. This is an example of a caption. Everything possible in this design. Everything possible in this design. I’m trying to include everything possible. This is an example of a caption. Everything possible in this design. I’m trying to include everything possible...</h4>
+                                    <a href="" class="readMore underline">Continue reading &#8594;</a>
+                                    <hr>
+                                    <span class="details"><span class="favorite floatLeft"><img class="like" src="http://i.imgur.com/miqgxes.png" /></span><span class="comment floatLeft"><img class="comment" src="http://i.imgur.com/CuI03R5.png" /></span></span></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="section group">
+                            <div class="col span_12_of_12 sub questionBox darkGrayBg">
+                                <div class="container">         
+                                    <span class="details"><span class="user floatLeft"><img class="user" src="http://i.imgur.com/BcMWkDq.jpg" /></span><span class="tag floatRight musculardystrophy">/MUSCULARDYSTROPHY</span></span></span>
+                                    <br>
+                                    <h3 class="white">How to best deal with an outburst?</h3>
+                                    <h4 class="lightGray">This is an example of a caption. I’m trying to include everything possible in this design. This is an example of a cap- tion. Everything possible in this design. Everything possible in this design. I’m trying to include everything possible.</h4>
+                                    <a href="" class="readMore underline">View answers &#8594;</a>
+                                    <hr>
+                                    <span class="details"><span class="favorite floatLeft"><img class="like" src="http://i.imgur.com/miqgxes.png" /></span><span class="comment floatLeft"><img class="comment" src="http://i.imgur.com/Swurq8A.png" /></span></span></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="col span_8_of_12">
+                        <div class="section group">
+                            <div class="col span_12_of_12 lightGrayBg sub">
+                                <div class="col span_4_of_4 videoBoxBig noMargin one2">
+                                    <div class="container">         
+                                        <span><span class="details"><span class="user floatLeft"><img class="user" src="http://i.imgur.com/BcMWkDq.jpg" /><span class="timestamp darkGray"> Feb. 12, 2016 @ 9:30AM</span></span></span><span class="tag floatRight autism">/AUTISM</span></span>
+                                        <br>
+                                        <h3 class="black">Mitchell Bregman is the title of this video. Just a test run to see how this title will fit in the shit...</h3>
+                                        <h4 class="darkGray">This is an example of a caption. I’m trying to include everything possible in this design. This is an example of a caption. Everything possible in this design. Everything possible in this design. I’m trying to include everything possible...</h4>
+                                    </div>
+                                    <div class="videoWrapper">
+                                        <iframe class="video" src="https://www.youtube.com/embed/28XHtZ2Lx9g?rel=0" frameborder="0" allowfullscreen></iframe>    
+                                    </div>
+                                    <br>
+                                    <div class="container">
+                                        <span class="details"><span class="favorite floatLeft"><img class="like" src="http://i.imgur.com/miqgxes.png" /></span><span class="comment floatLeft"><img class="comment" src="http://i.imgur.com/CuI03R5.png" /></span><span class="floatRight"><img class="option optionOne" src="http://i.imgur.com/oOiYBiP.png" /><img class="option optionTwo" src="http://i.imgur.com/hZMbxy2.png" /><img class="option optionThree" src="http://i.imgur.com/hZMbxy2.png" /><img class="option optionFour" src="http://i.imgur.com/hZMbxy2.png" /></span></span>
+                                    </div>
+                                </div>
+                                <div class="col span_4_of_4 videoBoxBig noMargin two2">
+                                    <div class="container">         
+                                        <span><span class="details"><span class="user floatLeft"><img class="user" src="http://i.imgur.com/BcMWkDq.jpg" /><span class="timestamp darkGray"> Feb. 12, 2016 @ 9:30AM</span></span></span><span class="tag floatRight autism">/AUTISM</span></span>
+                                        <br>
+                                        <h3 class="black">x Bregman is the title of this video. Just a test run to see how this title will fit in the shit...</h3>
+                                        <h4 class="darkGray">This is an example of a caption. I’m trying to include everything possible in this design. This is an example of a caption. Everything possible in this design. Everything possible in this design. I’m trying to include everything possible...</h4>
+                                    </div>
+                                    <div class="videoWrapper">
+                                        <iframe class="video" src="https://www.youtube.com/embed/28XHtZ2Lx9g?rel=0" frameborder="0" allowfullscreen></iframe>    
+                                    </div>
+                                    <br>
+                                    <div class="container">
+                                        <span class="details"><span class="favorite floatLeft"><img class="like" src="http://i.imgur.com/miqgxes.png" /></span><span class="comment floatLeft"><img class="comment" src="http://i.imgur.com/CuI03R5.png" /></span><span class="floatRight"><img class="option optionOne" src="http://i.imgur.com/hZMbxy2.png" /><img class="option optionTwo" src="http://i.imgur.com/oOiYBiP.png" /><img class="option optionThree" src="http://i.imgur.com/hZMbxy2.png" /><img class="option optionFour" src="http://i.imgur.com/hZMbxy2.png" /></span></span>
+                                    </div>
+                                </div>
+                                <div class="col span_4_of_4 videoBoxBig noMargin three2">
+                                    <div class="container">         
+                                        <span><span class="details"><span class="user floatLeft"><img class="user" src="http://i.imgur.com/BcMWkDq.jpg" /><span class="timestamp darkGray"> Feb. 12, 2016 @ 9:30AM</span></span></span><span class="tag floatRight autism">/AUTISM</span></span>
+                                        <br>
+                                        <h3 class="black">f Bregman is the title of this video. Just a test run to see how this title will fit in the shit...</h3>
+                                        <h4 class="darkGray">This is an example of a caption. I’m trying to include everything possible in this design. This is an example of a caption. Everything possible in this design. Everything possible in this design. I’m trying to include everything possible...</h4>
+                                    </div>
+                                    <div class="videoWrapper">
+                                        <iframe class="video" src="https://www.youtube.com/embed/28XHtZ2Lx9g?rel=0" frameborder="0" allowfullscreen></iframe>    
+                                    </div>
+                                    <br>
+                                    <div class="container">
+                                        <span class="details"><span class="favorite floatLeft"><img class="like" src="http://i.imgur.com/miqgxes.png" /></span><span class="comment floatLeft"><img class="comment" src="http://i.imgur.com/CuI03R5.png" /></span><span class="floatRight"><img class="option optionOne" src="http://i.imgur.com/hZMbxy2.png" /><img class="option optionTwo" src="http://i.imgur.com/hZMbxy2.png" /><img class="option optionThree" src="http://i.imgur.com/oOiYBiP.png" /><img class="option optionFour" src="http://i.imgur.com/hZMbxy2.png" /></span></span>
+                                    </div>
+                                </div>
+                                <div class="col span_4_of_4 videoBoxBig noMargin four2">
+                                    <div class="container">         
+                                        <span><span class="details"><span class="user floatLeft"><img class="user" src="http://i.imgur.com/BcMWkDq.jpg" /><span class="timestamp darkGray"> Feb. 12, 2016 @ 9:30AM</span></span></span><span class="tag floatRight autism">/AUTISM</span></span>
+                                        <br>
+                                        <h3 class="black">d Bregman is the title of this video. Just a test run to see how this title will fit in the shit...</h3>
+                                        <h4 class="darkGray">This is an example of a caption. I’m trying to include everything possible in this design. This is an example of a caption. Everything possible in this design. Everything possible in this design. I’m trying to include everything possible...</h4>
+                                    </div>
+                                    <div class="videoWrapper">
+                                        <iframe class="video" src="https://www.youtube.com/embed/28XHtZ2Lx9g?rel=0" frameborder="0" allowfullscreen></iframe>    
+                                    </div>
+                                    <br>
+                                    <div class="container">
+                                        <span class="details"><span class="favorite floatLeft"><img class="like" src="http://i.imgur.com/miqgxes.png" /></span><span class="comment floatLeft"><img class="comment" src="http://i.imgur.com/CuI03R5.png" /></span><span class="floatRight"><img class="option optionOne" src="http://i.imgur.com/hZMbxy2.png" /><img class="option optionTwo" src="http://i.imgur.com/hZMbxy2.png" /><img class="option optionThree" src="http://i.imgur.com/hZMbxy2.png" /><img class="option optionFour" src="http://i.imgur.com/oOiYBiP.png" /></span></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="section group">
+                                <div class="col span_6_of_12">
+                                    <div class="section group">
+                                        <div class="col span_12_of_12 lightGrayBg sub textBox">
+                                            <div class="container">         
+                                                <span class="details"><span class="user floatLeft"><img class="user" src="http://i.imgur.com/BcMWkDq.jpg" /></span><span class="tag floatRight autism">/AUTISM</span></span></span>
+                                                <br>
+                                                <h3 class="black">Mitchell Bregman is the title of this video. Just a test run to see how this title will fit in the shit...</h3>
+                                                <h4 class="darkGray">This is an example of a caption. I’m trying to include everything possible in this design. This is an example of a caption. Everything possible in this design. Everything possible in this design. I’m trying to include everything possible. This is an example of a caption. Everything possible in this design. I’m trying to include everything possible...</h4>
+                                                <a href="" class="readMore underline">Continue reading &#8594;</a>
+                                                <hr>
+                                                <span class="details"><span class="favorite floatLeft"><img class="like" src="http://i.imgur.com/miqgxes.png" /></span><span class="comment floatLeft"><img class="comment" src="http://i.imgur.com/CuI03R5.png" /></span></span></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="section group">
+                                        <div class="col span_12_of_12 lightGrayBg">
+
+                                        </div>
+                                    </div>
+                                    <div class="section group">
+                                        <div class="col span_12_of_12 lightGrayBg">x
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col span_6_of_12">
+                                    <div class="section group">
+                                        <div class="col span_12_of_12 lightGrayBg">
+                                            <div class="col span_12_of_12 lightGrayBg imageBox textCenter noMargin">
+                                                <img class="post" src="http://i.imgur.com/qjjRgVa.jpg" />
+                                                <div class="container">
+                                                    <span class="details"><span class="social floatLeft"><img class="like" src="http://i.imgur.com/miqgxes.png" /><span class="comment"><img class="comment" src="http://i.imgur.com/CuI03R5.png" /></span></span><span class="favorite"><img class="user" src="http://i.imgur.com/BcMWkDq.jpg" /></span><span class="tag"></span><span class="tag floatRight autism">/AUTISM</span></span></span>
+                                                </div>
+                                            </div> 
+                                        </div>
+                                    </div>
+                                    <div class="section group">
+                                        <div class="col span_12_of_12 lightGrayBg">x
+                                        </div>
+                                    </div>
+                                    <div class="section group">
+                                        <div class="col span_12_of_12 lightGrayBg">x
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col span_3_of_12">
+            <div class="col span_12_of_12">
+                    <div class="section group">
+                        <div class="col span_12_of_12 lightGrayBg sub textBox">
+                            <div class="container">         
+                                <span class="details"><span class="user floatLeft"><img class="user" src="http://i.imgur.com/BcMWkDq.jpg" /></span><span class="tag floatRight autism">/AUTISM</span></span></span>
+                                <br>
+                                <h3 class="black">Mitchell Bregman is the title of this video. Just a test run to see how this title will fit in the shit...</h3>
+                                <h4 class="darkGray">This is an example of a caption. I’m trying to include everything possible in this design. This is an example of a caption. Everything possible in this design. Everything possible in this design. I’m trying to include everything possible. This is an example of a caption. Everything possible in this design. I’m trying to include everything possible...</h4>
+                                <a href="" class="readMore underline">Continue reading &#8594;</a>
+                                <hr>
+                                <span class="details"><span class="favorite floatLeft"><img class="like" src="http://i.imgur.com/miqgxes.png" /></span><span class="comment floatLeft"><img class="comment" src="http://i.imgur.com/CuI03R5.png" /></span></span></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="section group">
+                        <div class="col span_12_of_12 sub questionBox darkGrayBg">
+                                <div class="container">         
+                                    <span class="details"><span class="user floatLeft"><img class="user" src="http://i.imgur.com/BcMWkDq.jpg" /></span><span class="tag floatRight musculardystrophy">/MUSCULARDYSTROPHY</span></span></span>
+                                    <br>
+                                    <h3 class="white">How to best deal with an outburst?</h3>
+                                    <h4 class="lightGray">This is an example of a caption. I’m trying to include everything possible in this design. This is an example of a cap- tion. Everything possible in this design. Everything possible in this design. I’m trying to include everything possible.</h4>
+                                    <a href="" class="readMore underline">View answers &#8594;</a>
+                                    <hr>
+                                    <span class="details"><span class="favorite floatLeft"><img class="like" src="http://i.imgur.com/miqgxes.png" /></span><span class="comment floatLeft"><img class="comment" src="http://i.imgur.com/Swurq8A.png" /></span></span></span>
+                                </div>
+                            </div>
+                    </div>
+                    <div class="section group">
+                        <div class="col span_12_of_12 lightGrayBg videoBoxSmall noMargin">
+                                <div class="container">         
+                                    <span class="details"><span class="user floatLeft"><img class="user" src="http://i.imgur.com/BcMWkDq.jpg" /></span><span class="tag floatRight musculardystrophy">/MUSCULARDYSTROPHY</span></span></span>
+                                    <br>
+                                    <h3 class="black">How to best deal with an outburst?</h3>
+                                </div>
+                                <div class="videoWrapper">
+                                    <iframe class="video" src="http://www.youtube.com/embed/n_dZNLr2cME?rel=0&hd=1" frameborder="0" allowfullscreen></iframe>
+                                </div>
+                                <br>
+                                <div class="container">
+                                    <span class="details"><span class="favorite floatLeft"><img class="like" src="http://i.imgur.com/miqgxes.png" /></span><span class="comment floatLeft"><img class="comment" src="http://i.imgur.com/CuI03R5.png" /></span></span></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="section group">
+                        <div class="col span_12_of_12 lightGrayBg imageBox textCenter">
+                            <img class="post" src="http://i.imgur.com/oRvRX9c.jpg" />
+                            <div class="container">
+                                <span class="details"><span class="social floatLeft"><img class="like" src="http://i.imgur.com/miqgxes.png" /><span class="comment"><img class="comment" src="http://i.imgur.com/CuI03R5.png" /></span></span><span class="favorite"><img class="user" src="http://i.imgur.com/BcMWkDq.jpg" /></span><span class="tag"></span><span class="tag floatRight autism">/AUTISM</span></span></span>
+                            </div>
+                        </div> 
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
 </div>
 

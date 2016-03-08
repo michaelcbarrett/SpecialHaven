@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>SpecialHaven | A community for caretakers, experts, and organizations in the disability space. </title>
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+    <meta name="Description" content="SpecialHaven is the one-stop shop for all things special needs. Caretakers, experts, and organizations all come to SpecialHaven for up-to-date news, events, podcasts, videos, and open-discussion related to disability. We aim to make the lives of all people affected easier. ">
+    <meta name="Keywords" content="special, needs, caretakers, doctors, psychiatrists, autism, cancer, muscular dystrophy, down syndrome, parents, mom, dad, buddy ball, exceptional families, family, special needs, disability, care, medical, mental disability, physical disability, illness, Autism, Aspergers, Parents, Providers, Social Network, Autism Support, Autism Group, CDD, ASD, HFA, Rett Syndrome, PDD-NOS, ABA Applied Behavior Analysis, High Functioning Autism, Childhood Disintegrative Disorder, Spectrum, Kids, Children, parent autism support, autism social network, Parent Support Group, special education, parent teacher association">
+    <meta property="og:title" content="SpecialHaven | A community for caretakers, experts, and organizations in the disability space. ">
+    <meta property="og:site_name" content="SpecialHaven">
+    <meta property="og:url" content="http://specialhaven.com">
+    <meta property="og:description" content="SpecialHaven is the one-stop shop for all things special needs. Caretakers, experts, and organizations all come to SpecialHaven for up-to-date news, events, podcasts, videos, and open-discussion related to disability. We aim to make the lives of all people affected easier. ">
+    <meta property  ="fb:app_id" content="">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@thespecialhaven" />
+    <meta name="twitter:title" content="The one-stop shop for up-to-date special needs and disability resources." />
+    <meta name="twitter:description" content="Check out our website for more information." />
+    <meta name="twitter:image" content="https://pbs.twimg.com/profile_images/658721004051656705/cKK5KJcD.png" />
+
+    <link href="https://necolas.github.io/normalize.css/3.0.3/normalize.css" rel="stylesheet" type="text/css">
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <link href="color.css" rel="stylesheet" type="text/css">
+    <link href="spaceGrid.css" rel="stylesheet" type="text/css">
+    <link href="noSpaceGrid.css" rel="stylesheet" type="text/css">
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Neuton:400,200,700,300' rel='stylesheet' type='text/css'>
+
+    <script src="banner.js"></script>
+
+</head>
+<body>
+
+    <header>
+        <div class="containerPage mobileMargin">
+            <span class="floatLeft"><img class="logo" src="http://i.imgur.com/BZIQF3I.png" /></span>
+            <span class="floatRight"><button class="postButton">NEW POST</button> <img class="profilePic" src="http://i.imgur.com/BcMWkDq.jpg" />
+            </div>
+        </header>
+
+        <div class="navSpacing"></div>
+
+        <div class="containerPage">
+
+            <div class="section group">
+
+                <div class="col span_9_of_12">
+                    <div class="section group">
+                        <div class="col span_12_of_12 midGrayBg bannerBox one1">
+                            <%=render partial: "featured_text", locals: {post: @texts.first, option: 1}%>
+                        </div>
+                        <div class="col span_12_of_12 midGrayBg bannerBox two1 noMargin bottomMargin">
+                            <%=render partial: "featured_text", locals: {post: @texts.second, option: 2}%>
+                        </div>
+                        <div class="col span_12_of_12 midGrayBg bannerBox three1 noMargin bottomMargin">
+                            <%=render partial: "featured_text", locals: {post: @texts.third, option: 3}%>
+                        </div>
+                        <div class="col span_12_of_12 midGrayBg bannerBox four1 noMargin bottomMargin">
+                            <%=render partial: "featured_text", locals: {post: @texts.fourth, option: 4}%>
+                        </div>
+
+
+                        <div class="section group">
+                            <div class="col span_4_of_12 ">
+                                <div class="section group">
+                                    
+                                        <%=render @posts.first.specific%>
+                                      
+                                </div>
+                                <div class="section group">
+                                    
+                                        <%=render @posts[1].specific%>
+                                    
+                                </div>
+                                <div class="section group">
+                                    <div class="col span_12_of_12 sub questionBox darkGrayBg">
+                                        <div class="container">         
+                                            <span class="details"><span class="user floatLeft"><img class="user" src="http://i.imgur.com/BcMWkDq.jpg" /></span><span class="tag floatRight musculardystrophy">/MUSCULARDYSTROPHY</span></span></span>
+                                            <br>
+                                            <h3 class="white">How to best deal with an outburst?</h3>
+                                            <h4 class="lightGray">This is an example of a caption. I’m trying to include everything possible in this design. This is an example of a cap- tion. Everything possible in this design. Everything possible in this design. I’m trying to include everything possible.</h4>
+                                            <a href="" class="readMore underline">View answers &#8594;</a>
+                                            <hr>
+                                            <span class="details"><span class="favorite floatLeft"><img class="like" src="http://i.imgur.com/miqgxes.png" /></span><span class="comment floatLeft"><img class="comment" src="http://i.imgur.com/Swurq8A.png" /></span></span></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="col span_8_of_12">
+                                <div class="section group">
+                                    <div class="col span_12_of_12 lightGrayBg sub">
+                                        <div class="col span_4_of_4 videoBoxBig noMargin one2" style="width: 100%;">
+
+                                            <%=render partial: 'big_video', locals: {post: @videos.first, option: 1}%>
+                                        </div>
+                                        <div class="col span_4_of_4 videoBoxBig noMargin two2" style="width: 100%;">
+                                            <%=render partial: 'big_video', locals: {post: @videos.first, option: 2}%>
+                                        </div>
+                                        <div class="col span_4_of_4 videoBoxBig noMargin three2" style="width: 100%;">
+                                            <%=render partial: 'big_video', locals: {post: @videos.first, option: 3}%>
+                                        </div>
+                                        <div class="col span_4_of_4 videoBoxBig noMargin four2" style="width: 100%;">
+                                            <%=render partial: 'big_video', locals: {post: @videos.first, option: 4}%>
+                                        </div>
+                                    </div>
+                                    <div class="section group">
+                                        <div class="col span_6_of_12">
+                                            <div class="section group">
+                                                <%=render @posts[2].specific%>
+                                            </div>
+                                            <div class="section group">
+                                                <div class="col span_12_of_12 lightGrayBg">
+
+                                                </div>
+                                            </div>
+                                            <div class="section group">
+                                                <div class="col span_12_of_12 lightGrayBg">x
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col span_6_of_12">
+                                            <div class="section group">
+                                                <div class="col span_12_of_12 lightGrayBg">
+                                                    <%=render @posts[3].specific%>
+                                                </div>
+                                            </div>
+                                            <div class="section group">
+                                                <div class="col span_12_of_12 lightGrayBg">x
+                                                </div>
+                                            </div>
+                                            <div class="section group">
+                                                <div class="col span_12_of_12 lightGrayBg">x
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col span_3_of_12">
+                    <div class="col span_12_of_12">
+                        <div class="section group">
+                            <%=render @posts[4].specific%>
+                        </div>
+                        <div class="section group">
+                            <div class="col span_12_of_12 sub questionBox darkGrayBg">
+                                <div class="container">         
+                                    <span class="details"><span class="user floatLeft"><img class="user" src="http://i.imgur.com/BcMWkDq.jpg" /></span><span class="tag floatRight musculardystrophy">/MUSCULARDYSTROPHY</span></span></span>
+                                    <br>
+                                    <h3 class="white">How to best deal with an outburst?</h3>
+                                    <h4 class="lightGray">This is an example of a caption. I’m trying to include everything possible in this design. This is an example of a cap- tion. Everything possible in this design. Everything possible in this design. I’m trying to include everything possible.</h4>
+                                    <a href="" class="readMore underline">View answers &#8594;</a>
+                                    <hr>
+                                    <span class="details"><span class="favorite floatLeft"><img class="like" src="http://i.imgur.com/miqgxes.png" /></span><span class="comment floatLeft"><img class="comment" src="http://i.imgur.com/Swurq8A.png" /></span></span></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="section group">
+                            <div class="col span_12_of_12 lightGrayBg videoBoxSmall noMargin">
+                                <div class="container">         
+                                    <span class="details"><span class="user floatLeft"><img class="user" src="http://i.imgur.com/BcMWkDq.jpg" /></span><span class="tag floatRight musculardystrophy">/MUSCULARDYSTROPHY</span></span></span>
+                                    <br>
+                                    <h3 class="black">How to best deal with an outburst?</h3>
+                                </div>
+                                <div class="videoWrapper">
+                                    <iframe class="video" src="http://www.youtube.com/embed/n_dZNLr2cME?rel=0&hd=1" frameborder="0" allowfullscreen></iframe>
+                                </div>
+                                <br>
+                                <div class="container">
+                                    <span class="details"><span class="favorite floatLeft"><img class="like" src="http://i.imgur.com/miqgxes.png" /></span><span class="comment floatLeft"><img class="comment" src="http://i.imgur.com/CuI03R5.png" /></span></span></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="section group">
+                            <%=render @posts[5].specific%>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+</div>
+
+</body>
+</html>
+
+</head>

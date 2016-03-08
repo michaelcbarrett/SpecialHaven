@@ -1,0 +1,39 @@
+/*  SECTIONS  */
+.section_ns {
+	clear: both;
+	padding: 0px;
+	margin: 0px;
+}
+
+/*  COLUMN SETUP  */
+.col_ns {
+	display: block;
+	float:left;
+	margin: 0% 0 0% 0%;
+}
+.col_ns:first-child { margin-left: 0; }
+
+/*  GROUPING  */
+.group_ns:before,
+.group_ns:after { content:""; display:table; }
+.group_ns:after { clear:both;}
+.group_ns { zoom:1; /* For IE 6/7 */ }
+/*  GRID OF FOUR  */
+.span_4_of_4_ns {
+	width: 100%;
+}
+.span_3_of_4_ns {
+	width: 75%;
+}
+.span_2_of_4_ns {
+	width: 50%;
+}
+.span_1_of_4_ns {
+	width: 25%;
+}
+
+/*  GO FULL WIDTH BELOW 480 PIXELS */
+@media only screen and (max-width: 720px) {
+	.col_ns {  margin: 1% 0 1% 0%; }
+	.span_1_of_4_ns, .span_2_of_4_ns, .span_3_of_4_ns, .span_4_of_4_ns { width: 100%; }
+}

@@ -1,19 +1,6 @@
-<li class="timeline-post">
-<span class="post-timestamp">
-<%=image_post.created_at.strftime("%m/%d/%y")%><br>
-<%=image_post.created_at.strftime("%I:%M %p")%>
-</span>
-
-<span class="post-main"><a href="/image_posts/<%=image_post.id%>"><span class="post-title"><%=image_post.title%></span></a>
-<img src="<%=image_post.image_url%>" class="post-image" width="60" height="60">
-<span class="post-body"><%=image_post.body%></span>
-<% if image_post.liked_by?(current_user) %>
-<% icon = "<i class='glyphicon glyphicon-heart like-button liked' id='heart-icon-#{image_post.acting_as.id}'></i>" %>
-<% else %>
-<% icon = "<i class='glyphicon glyphicon-heart like-button not-liked' id='heart-icon-#{image_post.acting_as.id}'></i>" %>
-<% end %>
-<%= link_to raw(icon), post_like_path(image_post.acting_as), remote: true, method: :put, class: "like-button"%>
-<small id="like-count-<%=image_post.acting_as.id%>"><%=image_post.liked_by.length%></small>
-</span>
-
-</li>
+<div class="col span_12_of_12 lightGrayBg imageBox textCenter">
+<img class="post" src=<%=image_post.image_url%> />
+<div class="container">
+	<span class="details"><span class="social floatLeft"><img class="like" src="http://i.imgur.com/miqgxes.png" /><span class="comment"><img class="comment" src="http://i.imgur.com/CuI03R5.png" /></span></span><span class="favorite"><img class="user" src="http://i.imgur.com/BcMWkDq.jpg" /></span><span class="tag"></span><span class="tag floatRight autism">/AUTISM</span></span></span>
+</div>
+</div>

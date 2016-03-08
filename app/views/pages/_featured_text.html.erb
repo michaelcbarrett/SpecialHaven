@@ -1,0 +1,34 @@
+
+<div class="bannerBoxOverlay">
+	<div class="container">
+		<span><span class="details"><span class="user floatLeft"><img class="user" src="http://i.imgur.com/BcMWkDq.jpg" /><span class="timestamp midGray"> <%=post.created_at.strftime("%m/%d/%y") + " @ " +  post.created_at.strftime("%I:%M %p")%> </span></span></span><span class="tag floatRight autism">/<%=post.tag_list.first%></span></span>
+		<div class="bannerBoxSpacing"></div>
+		<h1 class="white"><%=post.title%></h1>
+		<h2 class="midGray"><%=post.body%></h2>
+		<a href="" class="readMore underline">Continue reading &#8594;</a>
+		<hr>
+		<span class="details"><span class="favorite floatLeft"><img class="like" src="http://i.imgur.com/miqgxes.png" /></span><span class="comment floatLeft"><img class="comment" src="http://i.imgur.com/Swurq8A.png" /></span><span class="floatRight">
+		<%if option == 1%>
+		<img class="option optionOne1" src="http://i.imgur.com/P1Q9FCF.png" />
+		<%else%>
+		<img class="option optionOne1" src="http://i.imgur.com/VRYy3Zg.png" />
+		<%end%>
+		<%if option == 2%>
+		<img class="option optionTwo1" src="http://i.imgur.com/P1Q9FCF.png" />
+		<%else%>
+		<img class="option optionTwo1" src="http://i.imgur.com/VRYy3Zg.png" />
+		<%end%>
+		<%if option == 3%>
+		<img class="option optionThree1" src="http://i.imgur.com/P1Q9FCF.png" />
+		<%else%>
+		<img class="option optionThree1" src="http://i.imgur.com/VRYy3Zg.png" />
+		<%end%>
+		<%if option == 4%>
+		<img class="option optionFour1" src="http://i.imgur.com/P1Q9FCF.png" />
+		<%else%>
+		<img class="option optionFour1" src="http://i.imgur.com/VRYy3Zg.png" />
+		<%end%>
+	</span></span>
+	<br>
+</div>
+</div>
