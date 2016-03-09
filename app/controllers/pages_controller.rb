@@ -8,8 +8,6 @@ class PagesController < ApplicationController
     @videos = VideoPost.all.sort_by {|p| p.liked_by.length}
     @posts = (@texts + @images).sort_by{|p| p.liked_by.length}
 
-    p "CONTROLLER GOOD"
-
   end
 
   def index
