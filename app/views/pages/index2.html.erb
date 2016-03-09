@@ -98,39 +98,21 @@
                             <div class="col span_8_of_12">
                                 <div class="section group">
                                     <div class="col span_12_of_12 lightGrayBg sub">
-                                        
-                                    </div>
-                                    <div class="section group">
-                                        <div class="col span_6_of_12">
-                                            <div class="section group">
-                                                <%=if @posts[2].specific then render @posts[2].specific end%>
-                                            </div>
-                                            <div class="section group">
-                                                <div class="col span_12_of_12 lightGrayBg">
+                                        <div class="col span_4_of_4 videoBoxBig noMargin one2" style="width: 100%;">
 
-                                                </div>
-                                            </div>
-                                            <div class="section group">
-                                                <div class="col span_12_of_12 lightGrayBg">x
-                                                </div>
-                                            </div>
+                                            <%=if @videos.first then render partial: 'big_video', locals: {post: @videos.first, option: 1} end%>
                                         </div>
-                                        <div class="col span_6_of_12">
-                                            <div class="section group">
-                                                <div class="col span_12_of_12 lightGrayBg">
-                                                    <%=if @posts[3].specific then render @posts[3].specific end%>
-                                                </div>
-                                            </div>
-                                            <div class="section group">
-                                                <div class="col span_12_of_12 lightGrayBg">x
-                                                </div>
-                                            </div>
-                                            <div class="section group">
-                                                <div class="col span_12_of_12 lightGrayBg">x
-                                                </div>
-                                            </div>
+                                        <div class="col span_4_of_4 videoBoxBig noMargin two2" style="width: 100%;">
+                                            <%=if @videos.first then render partial: 'big_video', locals: {post: @videos.first, option: 2} end%>
+                                        </div>
+                                        <div class="col span_4_of_4 videoBoxBig noMargin three2" style="width: 100%;">
+                                            <%=if @videos.first then render partial: 'big_video', locals: {post: @videos.first, option: 3} end%>
+                                        </div>
+                                        <div class="col span_4_of_4 videoBoxBig noMargin four2" style="width: 100%;">
+                                            <%=if @videos.first then render partial: 'big_video', locals: {post: @videos.first, option: 4} end%>
                                         </div>
                                     </div>
+                                    
                                 </div>
                             </div>
                         </div>
