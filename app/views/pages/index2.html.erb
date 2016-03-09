@@ -63,7 +63,7 @@
                             <%=render partial: "featured_text", locals: {post: @texts.third, option: 3}%>
                         </div>
                         <div class="col span_12_of_12 midGrayBg bannerBox four1 noMargin bottomMargin">
-                            <%=render partial: "featured_text", locals: {post: @texts.fourth, option: 4}%>
+                            <%=render partial: "featured_text", locals: {post: @texts.first, option: 4}%>
                         </div>
 
 
@@ -71,12 +71,12 @@
                             <div class="col span_4_of_12 ">
                                 <div class="section group">
                                     
-                                        <%=render @posts.first.specific%>
+                                        <%=if @posts.first.specific then render @posts.first.specific end%>
                                       
                                 </div>
                                 <div class="section group">
                                     
-                                        <%=render @posts[1].specific%>
+                                        <%=if @posts[1].specific then render @posts[1].specific end%>
                                     
                                 </div>
                                 <div class="section group">
@@ -100,22 +100,22 @@
                                     <div class="col span_12_of_12 lightGrayBg sub">
                                         <div class="col span_4_of_4 videoBoxBig noMargin one2" style="width: 100%;">
 
-                                            <render partial: 'big_video', locals: {post: @videos.first, option: 1}>
+                                            <%=if @videos.first then render partial: 'big_video', locals: {post: @videos.first, option: 1} end%>
                                         </div>
                                         <div class="col span_4_of_4 videoBoxBig noMargin two2" style="width: 100%;">
-                                            <=render partial: 'big_video', locals: {post: @videos.first, option: 2}>
+                                            <%=if @videos.first then render partial: 'big_video', locals: {post: @videos.first, option: 2} end%>
                                         </div>
                                         <div class="col span_4_of_4 videoBoxBig noMargin three2" style="width: 100%;">
-                                            <=render partial: 'big_video', locals: {post: @videos.first, option: 3}>
+                                            <%=if @videos.first then render partial: 'big_video', locals: {post: @videos.first, option: 3} end%>
                                         </div>
                                         <div class="col span_4_of_4 videoBoxBig noMargin four2" style="width: 100%;">
-                                            <=render partial: 'big_video', locals: {post: @videos.first, option: 4}>
+                                            <%=if @videos.first then render partial: 'big_video', locals: {post: @videos.first, option: 4} end%>
                                         </div>
                                     </div>
                                     <div class="section group">
                                         <div class="col span_6_of_12">
                                             <div class="section group">
-                                                <%=render @posts[2].specific%>
+                                                <%=if @posts[2].specific then render @posts[2].specific end%>
                                             </div>
                                             <div class="section group">
                                                 <div class="col span_12_of_12 lightGrayBg">
@@ -130,7 +130,7 @@
                                         <div class="col span_6_of_12">
                                             <div class="section group">
                                                 <div class="col span_12_of_12 lightGrayBg">
-                                                    <%=render @posts[3].specific%>
+                                                    <%=if @posts[3].specific then render @posts[3].specific end%>
                                                 </div>
                                             </div>
                                             <div class="section group">
@@ -152,7 +152,7 @@
                 <div class="col span_3_of_12">
                     <div class="col span_12_of_12">
                         <div class="section group">
-                            <%=render @posts[4].specific%>
+                            <%=if @posts[4].specific then render @posts[4].specific end%>
                         </div>
                         <div class="section group">
                             <div class="col span_12_of_12 sub questionBox darkGrayBg">
@@ -185,7 +185,7 @@
                         </div>
                     </div>
                     <div class="section group">
-                            <%=render @posts[5].specific%>
+                            <%=if @posts[5].specific then render @posts[5].specific end%>
                         
                     </div>
                 </div>
