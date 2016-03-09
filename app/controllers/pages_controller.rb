@@ -3,14 +3,13 @@ class PagesController < ApplicationController
   end
 
   def index2
-    begin
     @texts = TextPost.all.sort_by {|p| p.liked_by.length}
     @images = ImagePost.all.sort_by {|p| p.liked_by.length}
     @videos = VideoPost.all.sort_by {|p| p.liked_by.length}
     @posts = (@texts + @images).sort_by{|p| p.liked_by.length}
-  rescue 
-    p "ERROR IN CONTROLLER"
-  end
+
+    p "CONTROLLER GOOD"
+
   end
 
   def index
