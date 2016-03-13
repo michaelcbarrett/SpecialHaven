@@ -1,0 +1,95 @@
+
+.bannerBoxText{
+	background-image: url('https://images.unsplash.com/photo-1457369804613-52c61a468e7d?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&w=1080&fit=max&s=f970569757f900368f1cf68f46cb92bb');
+	height: auto;
+	background-size: cover;
+}
+.bannerBoxSpacing{
+	height: 110px;
+}
+.bannerBoxOverlay{
+	padding: 24px 0px;
+}
+h1.textPost{
+	font-size: 48px;
+	line-height: 125%;
+	margin: 24px 0px 36px 0px;
+}
+p{
+	font-family: 'Neuton', Times, serif;	
+	font-size: 24px;
+	font-weight: 200;
+	line-height: 150%;
+}
+.container{
+	width: 75%;
+}
+span.date, span.time{
+	margin: 0px 8px;
+}
+.detailsText{
+	font-family: 'Neuton', Times, serif;
+	font-size: 21px; 
+	font-weight: 200;
+}
+.tagsText{
+}
+.tag{
+	margin-right: 16px;
+	padding: 3px 6px;
+	border: 1px solid #88CCF1;
+}
+img.postedByPic{
+	height: 24px;
+	border-radius: 100%;
+	border: 1px solid transparent;
+	cursor: pointer;
+	-webkit-transition: all .4s ease;
+	-moz-transition: all .4s ease;
+	-ms-transition: all .4s ease;
+	-o-transition: all .4s ease;
+	transition: all .4s ease;
+	margin: 0px 8px;
+	vertical-align: middle;
+}
+img.postedByPic:hover{
+	border: 1px solid #ffffff;
+}
+img.like{
+	width: 18px;
+	height: 18px;
+}
+img.likeBig{
+	width: 24px;
+	height: 24px;
+}
+@media only screen and (max-width: 720px) {
+	h1.textPost{
+		font-size: 36px;
+	}
+	.detailsText{
+		font-size: 15px;
+	}
+	span.date, span.time{
+		margin: 0px 4px;
+	}
+	img.postedByPic{
+		height: 21px;
+		margin: 0px 8px;
+	}
+	img.postedByPic:hover{
+		border: 1px solid #ffffff;
+	}
+	.tagsText{
+		font-size: 
+	}
+	p{
+		font-size: 21px;
+	}
+	.container{
+		width: 90%;
+	}
+	.bannerBoxSpacing{
+		height: 55px;
+	}
+}

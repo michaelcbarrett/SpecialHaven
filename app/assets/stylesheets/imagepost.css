@@ -1,0 +1,14 @@
+img.imagePost{
+	height: auto;
+	width: 100%;
+}
+h1.imagePost{
+	font-size: 48px;
+	line-height: 100%;
+}
+p{
+	font-family: 'Neuton', Times, serif;	
+	font-size: 24px;
+	font-weight: 200;
+	line-height: 150%;
+}
