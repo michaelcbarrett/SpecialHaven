@@ -2,9 +2,9 @@
 <div class="container">         
 <span class="details"><span class="user floatLeft"><img class="user" src="http://i.imgur.com/BcMWkDq.jpg" /></span><span class="tag floatRight autism">/<%=text_post.tag_list.first%></span></span></span>
 	<br>
-	<h3 class="black"><%=text_post.title%></h3>
+	<a href="<%=url_for text_post%>"><h3 class="black"><%=text_post.title%></h3></a>
 	<h4 class="darkGray"><%=text_post.body%></h4>
-	<a href="" class="readMore underline">Continue reading &#8594;</a>
+	<a href="<%=url_for text_post%>" class="readMore underline">Continue reading &#8594;</a>
 	<hr>
 	<span class="details"><span class="favorite floatLeft"><img class="like" src="http://i.imgur.com/miqgxes.png" /></span><span class="comment floatLeft"><img class="comment" src="http://i.imgur.com/CuI03R5.png" /></span></span></span>
 </div>

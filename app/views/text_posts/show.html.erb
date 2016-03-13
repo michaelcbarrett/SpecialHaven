@@ -1,2 +1,36 @@
-<h2><%= @post.title %></h2><br><hr>
-<p><%= @post.body %></p>
+<body>
+
+<div class="navSpacing"></div>
+
+<div class="containerPage">
+
+    <div class="section group">
+
+        <div class="col span_12_of_12 bannerBoxText">
+            <div class="bannerBoxOverlay">
+                <div class="container">
+                    <hr>
+                    <div class="bannerBoxSpacing"></div>
+                    <span class="detailsText midGray">Posted by<img class="postedByPic" src="http://i.imgur.com/BcMWkDq.jpg" />on<span class="lightGray date"><%=@post.created_at.strftime("%B %-d, %Y")%></span>at<span class="lightGray time"><%=@post.created_at.strftime("%I:%M %p")%></span></span>
+                    <br>
+                    <h1 class="white textPost"><%=@post.title%></h1>
+                    <span class="tagsText midGray"><span class="tag autism"><%=@post.tag_list.first%></span></span>
+                    <div class="bannerBoxSpacing"></div>
+                    <hr>
+                </div>
+            </div>
+        </div>
+        <div class="col span_12_of_12">
+            <div class="container">
+                <p class="darkGray"><%=@post.body%></p>
+                <hr><br>
+                <span class="details"><span class="favorite floatLeft"><img class="like likeBig" src="http://i.imgur.com/miqgxes.png" /></span></span></span>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<div class="navSpacing"></div>
+
+</body>

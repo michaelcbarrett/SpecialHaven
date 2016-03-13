@@ -5,7 +5,7 @@
 		<div class="bannerBoxSpacing"></div>
 		<h1 class="white"><%=post.title%></h1>
 		<h2 class="midGray"><%=post.body%></h2>
-		<a href="" class="readMore underline">Continue reading &#8594;</a>
+		<a href="<%=url_for post%>" class="readMore underline">Continue reading &#8594;</a>
 		<hr>
 		<span class="details"><span class="favorite floatLeft"><img class="like" src="http://i.imgur.com/miqgxes.png" /></span><span class="comment floatLeft"><img class="comment" src="http://i.imgur.com/Swurq8A.png" /></span><span class="floatRight">
 		<%if option == 1%>
