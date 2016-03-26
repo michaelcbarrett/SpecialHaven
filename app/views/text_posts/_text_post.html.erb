@@ -5,7 +5,7 @@
 </span><span class="tag floatRight autism">/<%=text_post.tag_list.first%></span></span></span>
 	<br>
 	<a href="<%=url_for text_post%>"><h3 class="black"><%=text_post.title%></h3></a>
-	<h4 class="darkGray"><%=text_post.body%></h4>
+	<h4 class="darkGray"><%=text_post.body[0..500]%><%=if text_post.body.length > 500 then "..." end%></h4>
 	<a href="<%=url_for text_post%>" class="readMore underline">Continue reading &#8594;</a>
 	<hr>
 	<span class="details"><span class="favorite floatLeft">

@@ -8,7 +8,7 @@
 		</span>
 		<div class="bannerBoxSpacing"></div>
 		<a href="<%=url_for post%>"><h1 class="white"><%=post.title%></h1></a>
-		<h2 class="midGray"><%=post.body%></h2>
+		<h2 class="midGray"><%=post.body[0..500]%><%=if post.body.length > 500 then "..." end%></h2>
 		<a href="<%=url_for post%>" class="readMore underline">Continue reading &#8594;</a>
 		<hr>
 		<span class="details"><span class="favorite floatLeft"><%=render partial: "buttons/like", locals: {post: post}%></span><span class="comment floatLeft"><img class="comment" src="http://i.imgur.com/Swurq8A.png" /></span><span class="floatRight">

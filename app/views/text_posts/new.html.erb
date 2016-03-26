@@ -1,3 +1,20 @@
+
+<body>
+<div class="container">
+<%= form_for @post do |f|%>
+<br>
+<br>
+<br>
+<br>
+<%= f.label :title %><br>
+<%= f.text_field :title%><br>
+<%= f.label :body %><br>
+<%= f.text_area :body %><br>
+<%= select_tag :tag_list, options_for_select(@tag_options), id: "tag_list", multiple: true %><br><br>
+<%= f.submit "Create Post" %>
+<% end %>
+</div>
+</body>
 <style>
 @import "bootstrap-sprockets";
 @import "bootstrap";
@@ -204,15 +221,3 @@ a.like-button{
   color: rgba(255, 0, 0, 0.3);
 }
 </style>
-<body>
-<div class="container">
-<%= form_for @post do |f|%>
-<%= f.label :title %><br>
-<%= f.text_field :title%><br>
-<%= f.label :body %><br>
-<%= f.text_area :body %><br>
-<%= select_tag :tag_list, options_for_select(@tag_options), id: "tag_list", multiple: true %><br><br>
-<%= f.submit "Create Post" %>
-<% end %>
-</div>
-</body>

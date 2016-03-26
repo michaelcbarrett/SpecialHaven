@@ -14,7 +14,7 @@ class ImagePostsController < ApplicationController
     @post.tag_list.add(params[:tag_list])
 		if @post.save
 			flash[:notice] = "Post created successfully."
-			redirect_to '/timeline'
+			redirect_to root_path
 		else
 			flash[:notice] = "Please try posting again. Ensure all fields are filled."
 			redirect_to :back
