@@ -1,55 +1,83 @@
-<div class="jumbotron">
-  <h2>Sign up</h2>
+<body class="signupBg">
 
-  <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+
+<div class="navSpacing"></div>
+
+<div class="containerPage newContainer">
+
+    <div class="section group">
+
+        <div class="col span_7_of_12">
+            <div class="container">
+                <div class="loginBoxSpacing">
+                </div>
+                <h4 class="darkGray bold topSpace">SIGN UP</h4>
+                <input type="button" class="facebookButton login" value="Sign up with Facebook"/>
+                <h6 class="darkGray thin topSpace">OR EMAIL...</h6>
+                  <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
     <%= devise_error_messages! %>
+                    <%= f.text_field :first_name, autofocus: true, class: "signup topSpace", placeholder: "First name" %>
+                    <%= f.text_field :last_name, class: "signup topSpace", placeholder: "Last name" %>
+                    <%= f.email_field :email, class: "signup", placeholder: "Email Address"%>
+                    <%= f.password_field :password, autocomplete: "off" , class: "signup", placeholder: "Password"%>
+                    <%= f.password_field :password_confirmation, autocomplete: "off", class: "signup", placeholder: "Confirm Password" %>
+                    <%= f.text_field :zip_code, class: "signup", placeholder: "Zip Code"%>
+                    <h6 class="darkGray boldest topSpace">ROLE</h6>
+                    <%= f.select :user_type, [['Caretaker', 'caretaker'], ['Expert', 'expert'], ['Nonprofit', 'nonprofit'], ['Business', 'business']], {}, {class: "signup"} %>
+                    <%= f.submit "Register" , class: "postButton"%>
+                  <% end %>
+                <a href="<%=new_user_session_path%>" class=""><h6 class="thin">Already have an account? Sign in here!</h6></a>
 
-    <div class="field">
-      <%= f.label :first_name %><br />
-      <%= f.text_field :first_name, autofocus: true %>
+                <br class="hide">
+                <br>
+            </div>
+        </div>
+        <div class="col span_5_of_12">
+            <div class="container">
+                <div class="loginBoxSpacing">
+                </div>
+                <h2 class="darkBlue login hide"><span class="bold">Special</span> <span class="darkGray">means – better, greater, or otherwise different from what is usual. We named our website SpecialHaven because to us it is something greater, something beautiful and nurturing.</span></h2>
+                <br>
+                <hr class="hide">
+                <br>
+            </div>
+        </div>
     </div>
 
-    <div class="field">
-      <%= f.label :last_name %><br />
-      <%= f.text_field :last_name%>
-    </div>
-
-    <div class="field">
-      <%= f.label :zip_code %><br />
-      <%= f.text_field :zip_code%>
-    </div>
-
-    <div class="field">
-      <%= f.label :email %><br />
-      <%= f.email_field :email%>
-    </div>
-
-    <div class="field">
-      <%= f.label :password %>
-      <% if @minimum_password_length %>
-      <em>(<%= @minimum_password_length %> characters minimum)</em>
-      <% end %><br />
-      <%= f.password_field :password, autocomplete: "off" %>
-    </div>
-
-    <div class="field">
-      <%= f.label :password_confirmation %><br />
-      <%= f.password_field :password_confirmation, autocomplete: "off" %>
-    </div>
-
-    <div class="field">
-      <%= f.label :user_type %><br />
-      <%= f.select :user_type, [['Caretaker', 'caretaker'], ['Expert', 'expert'], ['Nonprofit', 'nonprofit'], ['Business', 'business']] %>
-    </div><br />
-
-    <div class="actions">
-      <%= f.submit "Sign up" %>
-    </div>
-  <% end %>
- 
-  <h3><span>Or</span></h3>
-
-  <div class="text-center">
-    <%= link_to "Log in with Facebook", user_omniauth_authorize_path(:facebook), class: "btn btn-primary btn-block fb-btn" %>
-  </div>
 </div>
+
+<div class="navSpacing"></div>
+
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
