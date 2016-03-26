@@ -14,7 +14,11 @@
                     <span class="detailsText midGray">Posted by<img class="postedByPic" src="http://i.imgur.com/BcMWkDq.jpg" />on<span class="lightGray date"><%=@post.created_at.strftime("%B %-d, %Y")%></span>at<span class="lightGray time"><%=@post.created_at.strftime("%I:%M %p")%></span></span>
                     <br>
                     <h1 class="white textPost"><%=@post.title%></h1>
-                    <span class="tagsText midGray"><span class="tag autism"><%=@post.tag_list.first%></span></span>
+                    <span class="tagsText midGray">
+                        <%@post.tag_list.each do |t|%>
+                <span class="tag autism">/<%=t%></span>
+                <%end%>
+                    </span>
                     <div class="bannerBoxSpacing"></div>
                     <hr>
                 </div>

@@ -1,6 +1,19 @@
+<%if user_signed_in?%>
 <header>
     <div class="containerPage mobileMargin">
         <span class="floatLeft"><a href="<%=url_for root_path%>"><img class="logo" src="http://i.imgur.com/BZIQF3I.png" /></a></span>
-        <span class="floatRight"><button class="postButton">NEW POST</button> <img class="profilePic" src="http://i.imgur.com/BcMWkDq.jpg" />
+        <span class="floatRight"><button class="postButton" id="newpost">NEW POST</button> <img class="profilePic" src="http://i.imgur.com/BcMWkDq.jpg" />
+
+    </div>
+
+</header>
+<%else%>
+<header>
+    <div class="containerPage mobileMargin">
+        <span class="floatLeft"><a href="<%=url_for root_path%>"><img class="logo" src="http://i.imgur.com/BZIQF3I.png" /></a></span>
+        <a href="new_user_session_path"><span class="floatRight login">SIGN IN</span></a>
+        <span class="floatRight about">ABOUT</span>
+        <a target="_blank" href="http://specialhaven.tumblr.com"><span class="floatRight about">BLOG</span></a>
     </div>
 </header>
+<%end%>

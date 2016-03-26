@@ -10,16 +10,16 @@
             <div class="col span_9_of_12">
                 <div class="section group">
                 <div class="col span_12_of_12 midGrayBg bannerBox one1">
-                        <%=render partial: "featured_text", locals: {post: @texts.first, option: 1}%>
+                        <%=if @texts.first then render partial: "featured_text", locals: {post: @texts.first, option: 1} end%>
                     </div>
                     <div class="col span_12_of_12 midGrayBg bannerBox two1 noMargin bottomMargin" type="hidden">
-                        <%=render partial: "featured_text", locals: {post: @texts.second, option: 2}%>
+                        <%=if @texts.second then render partial: "featured_text", locals: {post: @texts.second, option: 2} end%>
                     </div>
                     <div class="col span_12_of_12 midGrayBg bannerBox three1 noMargin bottomMargin" type="hidden">
-                        <%=render partial: "featured_text", locals: {post: @texts.third, option: 3}%>
+                        <%=if @texts.third then render partial: "featured_text", locals: {post: @texts.third, option: 3} end%>
                     </div>
                     <div class="col span_12_of_12 midGrayBg bannerBox four1 noMargin bottomMargin" type="hidden">
-                        <%=render partial: "featured_text", locals: {post: @texts.first, option: 4}%>
+                        <%=if @texts.fourth then render partial: "featured_text", locals: {post: @texts.first, option: 4} end%>
                     </div>
 
 
@@ -27,12 +27,12 @@
                         <div class="col span_4_of_12 ">
                             <div class="section group">
 
-                                <%=if @posts.first.specific then render @posts.first.specific end%>
+                                <%=if @posts[0] then render @posts.first.specific end%>
 
                             </div>
                             <div class="section group">
 
-                                <%=if @posts[1].specific then render @posts[1].specific end%>
+                                <%=if @posts[1] then render @posts[1].specific end%>
 
                             </div>
                             <div class="section group">
@@ -71,7 +71,7 @@
                                 <div class="section group">
                                     <div class="col span_6_of_12">
                                         <div class="section group">
-                                            <%=if @posts[2].specific then render @posts[2].specific end%>
+                                            <%=if @posts[2] then render @posts[2].specific end%>
                                         </div>
                                         <div class="section group">
                                             <div class="col span_12_of_12 lightGrayBg">
@@ -79,23 +79,20 @@
                                             </div>
                                         </div>
                                         <div class="section group">
-                                            <div class="col span_12_of_12 lightGrayBg">x
-                                            </div>
+                                            
                                         </div>
                                     </div>
                                     <div class="col span_6_of_12">
                                         <div class="section group">
                                             <div class="col span_12_of_12 lightGrayBg">
-                                                <%=if @posts[3].specific then render @posts[3].specific end%>
+                                                <%=if @posts[3] then render @posts[3].specific end%>
                                             </div>
                                         </div>
                                         <div class="section group">
-                                            <div class="col span_12_of_12 lightGrayBg">x
-                                            </div>
+                                            
                                         </div>
                                         <div class="section group">
-                                            <div class="col span_12_of_12 lightGrayBg">x
-                                            </div>
+                                            
                                         </div>
                                     </div>
                                 </div>

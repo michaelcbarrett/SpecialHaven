@@ -1,3 +1,4 @@
+
 /* text types */
 h1{font-family: 'Open Sans', Arial, sans-serif; margin: 0; font-size: 32px; line-height: 120%;}
 h2{font-family: 'Neuton', serif; margin: 5px 0px 10px 0px; font-size: 24px; font-weight: 200; line-height: 120%;}
@@ -8,25 +9,36 @@ h6{font-family: 'Open Sans', Arial, sans-serif; font-size: 10px;}
 
 /* links */
 a, a:hover, a:visited, a:active{text-decoration: none; outline: none; color: inherit;}
-a.underline:hover{text-decoration: underline;}
+a.underline:hover{text-decoration: underline; color: inherit;}
 a.readMore{font-family: 'Raleway', serif; font-size: 15px; margin: 15px 0px 0px 0px; font-weight: 700; color: #428bca;}
+a.noAccount{font-family: 'Open Sans', sans-serif; font-size: 13px; margin: 24px 0px 0px 0px; font-weight: 400; padding: 6px 10px; border: 1px solid #ffffff; background-color: rgba(255,255,255,.8);}
+a.noAccount:hover{background-color: rgba(255,255,255,1);}
+.thinner{
+	font-weight: 200;
+}
+.thin{
+	font-weight: 300;
+}
+.normal{
+	font-weight: 400;
+}
+.bold{
+	font-weight: 500;
+}
+.bolder{
+	font-weight: 600;
+}
+.boldest{
+	font-weight: 700;
+}
 
-/* colors */
-.white{color: #ffffff;}
-.lightGray{color: #f6f7f7;}
-.midGray{color: #d1d2d4;}
-.darkGray{color: #40474c;}
-.black{color: #231f20;}
-.blue{color: #428bca;}
-.darkBlue{color: #2B71AD;}
+.sanserif{
+	font-family: 'Open Sans', Arial, Serif;
+}
+.serf{
+	font-family: 'Open Sans', Arial, sans-serif;
+}
 
-/* background-colors */
-.whiteBg{background-color: #ffffff;}
-.lightGrayBg{background-color: #f6f7f7;}
-.midGrayBg{background-color: #d1d2d4;}
-.darkGrayBg{background-color: #40474c;}
-.blackBg{background-color: #231f20;}
-.blueBg{background-color: #428bca;}
 
 /* box types */
 .textBox{
@@ -100,6 +112,9 @@ a.readMore{font-family: 'Raleway', serif; font-size: 15px; margin: 15px 0px 0px 
 	margin: auto;
 	height: auto;
 }
+.fixed{
+	position: fixed;
+}
 
 /* buttons */
 .discussionButton{
@@ -144,7 +159,28 @@ a.readMore{font-family: 'Raleway', serif; font-size: 15px; margin: 15px 0px 0px 
 .postButton:hover{
 	background-color: #2B71AD;
 }
-
+.facebookButton{
+	padding: 20px 0px;
+	width: 100%;
+	margin: 12px 0px 16px 0px;
+	background-color: #2B71AD;
+	font-family: 'Open Sans', Arial, Serif;
+	font-weight: 300;
+	font-size: 16px;
+	color: #ffffff;
+	cursor: pointer;
+	outline: none;
+	border: none;
+	letter-spacing: 1px;
+	-webkit-transition: all .4s ease;
+	-moz-transition: all .4s ease;
+	-ms-transition: all .4s ease;
+	-o-transition: all .4s ease;
+	transition: all .4s ease;
+}
+.facebookButton:hover{
+	background-color: #1C5485;
+}
 /* spans */
 span.details{
 	width: 100%;
@@ -154,13 +190,24 @@ span.details{
 span.tag{
 	text-transform: uppercase;
 	font-family: 'Open Sans', Arial, Serif;
+	font-weight: 500;
+	letter-spacing: 1px;
+	font-size: 11px;
+	margin-top: 1px;
+}
+span.discussionTag{
+	text-transform: uppercase;
+	font-family: 'Open Sans', Arial, Serif;
 	font-weight: 300;
 	letter-spacing: 1px;
-	font-size: 12px;
+	color: white;
+	border: 1px solid white;
+	padding: 2px 3px;
+	font-size: 8px;
 }
 span.timestamp{
 	font-family: 'Open Sans', Arial, Serif;
-	font-weight: 300;
+	font-weight: 400;
 	letter-spacing: 1px;
 	font-size: 12px;
 }
@@ -168,7 +215,24 @@ span.favorite{
 
 }
 span.comment{
-
+	margin-left: 5px;
+	font-weight: 400;
+}
+span.about, span.login{
+	font-family: 'Open Sans', Arial, Serif;
+	letter-spacing: 1px;
+	font-size: 12px;
+	margin-left: 24px;
+	margin-top: 2px;
+	cursor: pointer;
+}
+span.about{
+	color: #40474c;
+	font-weight: 300;
+}
+span.login{
+	color: #428bca;
+	font-weight: 400;
 }
 hr{
 	border: none;
@@ -240,7 +304,7 @@ img.user{
 	-ms-transition: all .4s ease;
 	-o-transition: all .4s ease;
 	transition: all .4s ease;
-	vertical-align: middle;
+	vertical-align: top;
 }
 img.user:hover{
 	border: 1px solid #428bca;
@@ -253,6 +317,7 @@ img.post{
 }
 img.logo{
 	height: 24px;
+	cursor: pointer;
 }
 img.profilePic{
 	height: 24px;
@@ -269,6 +334,23 @@ img.profilePic{
 img.profilePic:hover{
 	border: 1px solid #2B71AD;
 }
+img.profilePagePic{
+	height: 144px;
+	border-radius: 100%;
+	border: 1px solid transparent;
+	cursor: pointer;
+	-webkit-transition: all .4s ease;
+	-moz-transition: all .4s ease;
+	-ms-transition: all .4s ease;
+	-o-transition: all .4s ease;
+	transition: all .4s ease;
+	vertical-align: middle;
+	margin: 0px 0px 16px 0px;
+}
+img.profilePagePic:hover{
+	border: 1px solid #428bca;
+}
+
 img.like, img.comment{
 	height: 14px;
 	cursor: pointer;
@@ -280,8 +362,18 @@ img.like, img.comment{
 	vertical-align: middle;
 	opacity: .5;
 }
+img.liked{
+	height: 14px;
+	cursor: pointer;
+	vertical-align: middle;
+	opacity: .99;
+}
+img.likeBig{
+	width: 24px;
+	height: 24px;
+}
 img.like:hover, img.comment:hover{
-	opacity: 1;
+	opacity: .99;
 }
 img.comment{
 	margin-left: 8px;

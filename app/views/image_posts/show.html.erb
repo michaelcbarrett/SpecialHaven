@@ -1,9 +1,11 @@
 
+
 <body>
+
 
 <div class="navSpacing"></div>
 
-<div class="containerPage">
+<div class="containerPage newContainer">
 
     <div class="section group">
 
@@ -11,12 +13,20 @@
             <div class="container">
                 <hr>
                 <br>
-                <span class="tagsText midGray"><span class="tag autism"><%=@post.tag_list.first%></span></span>
-                <br><br><br>
-                <span class="detailsText midGray">Posted by<img class="postedByPicImage" src="http://i.imgur.com/BcMWkDq.jpg" />on<span class="darkGray date"><%=@post.created_at.strftime("%B %-d, %Y")%></span>at<span class="darkGray time"><%=@post.created_at.strftime("%I:%M %p")%></span></span>
-
+                <span class="detailsText darkGray">Posted by<img class="postedByPicImage" src="http://i.imgur.com/BcMWkDq.jpg" />on<span class="black date"><%=@post.created_at.strftime("%B %-d, %Y")%></span>at<span class="black time"><%=@post.created_at.strftime("%I:%M %p")%></span></span>
                 <h1 class="black imagePost"><%=@post.title%></h1>
+
+            </div>
+            <div class="container textCenter newContainer">
                 <img class="image" align="center" src="<%=@post.image_url%>" />
+                <span class="tagsText midGray">
+                <%@post.tag_list.each do |t|%>
+                <span class="tag autism">/<%=t%></span>
+                <%end%>
+                </span>
+            </div>
+            <div class="container">
+
                 <p class="darkGray"><%=@post.body%></p>
                 <hr><br>
 
@@ -32,8 +42,6 @@
 <div class="navSpacing"></div>
 
 </body>
-
-
 
 
 

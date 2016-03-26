@@ -1,6 +1,8 @@
 	<div class="bannerBoxOverlay">
 		<div class="container">
-		<span><span class="details"><span class="user floatLeft"><img class="user" src="http://i.imgur.com/BcMWkDq.jpg" /><span class="timestamp midGray"> <%=post.created_at.strftime("%m/%d/%y") + " @ " +  post.created_at.strftime("%I:%M %p")%> </span></span></span><span class="tag floatRight autism">/<%=post.tag_list.first%></span></span>
+		<span><span class="details"><span class="user floatLeft"><img class="user" src="http://i.imgur.com/BcMWkDq.jpg" /><span class="timestamp midGray"> <%=post.created_at.strftime("%m/%d/%y") + " @ " +  post.created_at.strftime("%I:%M %p")%> </span></span></span><%if post.tag_list.first%>
+		<span class="tag floatRight autism">/<%=post.tag_list.first%></span>
+		<%end%></span>
 			<div class="bannerBoxSpacing"></div>
 			<h1 class="white"><%=post.title%></h1>
 			<h2 class="midGray"><%=post.body%></h2>

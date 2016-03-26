@@ -1,19 +1,18 @@
 $( document ).ready(function() {
 
 
-	$("a.like-button, i.like-button").click(function(event){
+	$("img.like").click(function(event){
 
 		if($(this).hasClass("liked")){
-			this.style.opacity = 0.5;
+
 			$(this).removeClass("liked");
-			$(this).addClass("not-liked");
+			$(this).addClass("like");
 		
 
-		} else if ($(this).hasClass("not-liked")){
-
-			this.style.opacity = 1;
-			$(this).removeClass("not-liked");
+		} else {
+			$(this).removeClass("like");
 			$(this).addClass("liked");
+
 		}
 	});
 

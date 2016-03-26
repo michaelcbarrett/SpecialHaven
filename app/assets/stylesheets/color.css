@@ -1,2 +1,37 @@
-.autism{color: #88CCF1}
+/* color scheme */
+.white{color: #ffffff;}
+.lightGray{color: #f6f7f7;}
+.midGray{color: #d1d2d4;}
+.darkGray{color: #40474c;}
+.black{color: #231f20;}
+.blue{color: #428bca;}
+.darkBlue{color: #2B71AD;}
+
+/* bg classes */
+.whiteBg{background-color: #ffffff;}
+.lightGrayBg{background-color: #f6f7f7;}
+.midGrayBg{background-color: #d1d2d4;}
+.darkGrayBg{background-color: #40474c;}
+.blackBg{background-color: #231f20;}
+.blueBg{background-color: #428bca;}
+.loginBg{
+	background: url('http://i.imgur.com/vKLA43K.jpg') no-repeat center center fixed; 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='.myBackground.jpg', sizingMethod='scale');
+	-ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='myBackground.jpg', sizingMethod='scale')";
+	}
+.signupBg{
+	background: url('http://i.imgur.com/QIGfjEy.jpg') no-repeat center center fixed; 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='.myBackground.jpg', sizingMethod='scale');
+	-ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='myBackground.jpg', sizingMethod='scale')";
+	}
+.autism{color: #88CCF1; border-color: #88CCF1}
 .musculardystrophy{color: #45CB85;}
+

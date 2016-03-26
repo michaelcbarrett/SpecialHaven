@@ -1,33 +1,86 @@
-<div class="jumbotron">
-  <h2>Log in</h2>
+<body class="loginBg">
 
-  <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-    <div class="field">
-      <%= f.label :email %><br />
-      <%= f.email_field :email, autofocus: true %>
-    </div>
 
-    <div class="field">
-      <%= f.label :password %><br />
-      <%= f.password_field :password, autocomplete: "off" %>
-    </div>
+  <div class="navSpacing"></div>
 
-    <% if devise_mapping.rememberable? -%>
-      <div class="field">
-        <%= f.label :remember_me, class: "checkbox" do %>
-          <%= f.check_box :remember_me %> Remember me
-        <% end %>
+  <div class="containerPage newContainer">
+
+    <div class="section group">
+
+      <div class="col span_7_of_12 hide">
+        <div class="container">
+          <div class="loginBoxSpacing">
+          </div>
+          <h2 class="white login hide"><span class="bold">SpecialHaven</span> <span class="lightGray">is a community for caretakers, experts, and organizations in the disability space.</span></h2>
+          <h3 class="thin login midGray hide">SpecialHaven is the one-stop shop for all things special needs. Caretakers, experts, and organizations all come to SpecialHaven for up-to-date news, events, podcasts, videos, and open-discussion related to disability. We aim to make the lives of all people affected easier.</h3>
+          <br>
+          <a href="" class="noAccount underline">Don't have an account? Sign up for free &#8594;</a>
+
+        </div>
       </div>
-    <% end -%>
 
-    <div class="actions">
-      <%= f.submit "Log in" %>
+      <div class="col span_5_of_12">
+        <div class="container">
+          <div class="loginBoxSpacing">
+          </div>
+          <h4 class="midGray bold topSpace">SIGN IN</h4>
+          <a href="<%=user_omniauth_authorize_path(:facebook)%>"><input type="button" class="facebookButton login" value="Sign in with Facebook"/></a>
+          <h6 class="midGray thin topSpace">OR EMAIL...</h6>
+          <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+          
+
+          <%= f.email_field :email, autofocus: true, class: "login topSpace", placeholder: "Email Address"%>
+          <%= f.password_field :password, autocomplete: "off", class: "login", placeholder: "Password" %>
+          <% if devise_mapping.rememberable? -%>
+          <div class="field">
+            <%= f.label :remember_me, class: "checkbox" do %>
+            <%= f.check_box :remember_me %> <h6 style="display:inline" class="midGray thin">Remember me</h6>
+            <% end %>
+          </div>
+          <% end -%>
+          <%= f.submit "Sign in", class: "postButton login" %>
+          
+          
+          <% end %>
+          <a href="" class=""><h6 class="thin midGray">Forgot password?</h6></a>
+          <br><br>
+        </div>
+        <div class="container textCenter">
+          <a href="<%=new_user_registration_path%>" class="noAccount show underline">Don't have an account? Sign up for free &#8594;</a>
+        </div>
+      </div>
     </div>
-  <% end %>
 
-  <h3><span>Or</span></h3>
-
-  <div class="text-center">
-    <%= link_to "Log in with Facebook", user_omniauth_authorize_path(:facebook), class: "btn btn-primary btn-block fb-btn" %>
   </div>
-</div>
+
+  <div class="navSpacing"></div>
+
+</body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

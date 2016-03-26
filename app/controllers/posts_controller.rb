@@ -1,5 +1,8 @@
 class PostsController < ApplicationController
 	def like
+		if !user_signed_in?
+			redirect_to new_user_session_path
+		end
 		@post = Post.find(params[:post_id])
 		if @post.liked_by?(current_user)
 			Like.where(user: current_user, post: @post).destroy_all

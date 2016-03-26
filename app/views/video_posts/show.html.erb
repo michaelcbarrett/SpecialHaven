@@ -1,3 +1,71 @@
-<h2><%= @post.title %></h2><br><hr>
-<p>Video URL: <%=@post.url%></p>
-<p><%= @post.body %></p>
+
+<body class="lightGrayBg">
+
+<div class="navSpacing"></div>
+
+<div class="containerPage newContainer">
+
+    <div class="section group">
+
+        <div class="col span_12_of_12">
+            <div class="container">
+                <br>
+                <span class="detailsText darkGray">Posted by<img class="postedByPicImage" src="http://i.imgur.com/BcMWkDq.jpg" />on<span class="black date"><%=@post.created_at.strftime("%B %-d, %Y")%></span>at<span class="black time"><%=@post.created_at.strftime("%I:%M %p")%></span></span>
+            </div>
+            <br>
+            <div class="container newContainer">
+                <div class="videoWrapper">
+                    <iframe class="videoDetail" src="https://www.youtube.com/embed/9UM_qJCFuoY?rel=0" frameborder="0" allowfullscreen></iframe>
+                </div>
+            </div>
+            <br><br>
+            <div class="container textCenter">
+                <span class="tagsText midGray">
+                <%@post.tag_list.each do |t|%>
+                <span class="tag autism">/<%=t%></span>
+                <%end%>
+                </span>
+            </div>
+            <div class="container">
+                <h1 class="black imagePost"><%=@post.title%></h1>
+                <p class="darkGray"><%=@post.body%></p>
+                <hr>
+                <br>
+                <span class="details"><span class="favorite floatLeft"><img class="like likeBig" src="http://i.imgur.com/miqgxes.png" /></span></span></span>
+
+
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<div class="navSpacing"></div>
+
+</body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

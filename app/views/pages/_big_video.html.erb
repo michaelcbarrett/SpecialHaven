@@ -2,7 +2,9 @@
 
 
 <div class="container">         
-<span><span class="details"><span class="user floatLeft"><img class="user" src="http://i.imgur.com/BcMWkDq.jpg" /><span class="timestamp darkGray"> <%=post.created_at.strftime("%m/%d/%y") + " @ " +  post.created_at.strftime("%I:%M %p")%></span></span></span><span class="tag floatRight autism">/<%post.tag_list.first%></span></span>
+<span><span class="details"><span class="user floatLeft"><img class="user" src="http://i.imgur.com/BcMWkDq.jpg" /><span class="timestamp darkGray"> <%=post.created_at.strftime("%m/%d/%y") + " @ " +  post.created_at.strftime("%I:%M %p")%></span></span></span><%if post.tag_list.first%>
+		<span class="tag floatRight autism">/<%=post.tag_list.first%></span>
+		<%end%></span>
 	<br>
 	<h3 class="black"><%=post.title%></h3>
 	<h4 class="darkGray"><%=post.body%></h4>

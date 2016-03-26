@@ -3,10 +3,10 @@ class PagesController < ApplicationController
   end
 
   def index2
-    @texts = TextPost.all.sort_by {|p| p.liked_by.length}
-    @images = ImagePost.all.sort_by {|p| p.liked_by.length}
-    @videos = VideoPost.all.sort_by {|p| p.liked_by.length}
-    @posts = (@texts + @images).sort_by{|p| p.liked_by.length}
+    @texts = TextPost.all
+    @images = ImagePost.all
+    @videos = VideoPost.all
+    @posts = (@texts + @images).sort_by {|s| s.created_at}
 
   end
 
