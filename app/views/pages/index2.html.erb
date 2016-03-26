@@ -1,1 +1,153 @@
-HELLLO
+
+<body data-no-turbolink="true">
+
+    <div class="navSpacing"></div>
+
+    <div class="containerPage">
+<%=p "JKDLFLJKF"%>
+        <div class="section group">
+
+            <div class="col span_9_of_12">
+                <div class="section group">
+                <div class="col span_12_of_12 midGrayBg bannerBox one1">
+                        <%=if @texts.first then render partial: "featured_text", locals: {post: @texts.first, option: 1} end%>
+                    </div>
+                    <div class="col span_12_of_12 midGrayBg bannerBox two1 noMargin bottomMargin" type="hidden">
+                        <%=if @texts.second then render partial: "featured_text", locals: {post: @texts.second, option: 2} end%>
+                    </div>
+                    <div class="col span_12_of_12 midGrayBg bannerBox three1 noMargin bottomMargin" type="hidden">
+                        <%=if @texts.third then render partial: "featured_text", locals: {post: @texts.third, option: 3} end%>
+                    </div>
+                    <div class="col span_12_of_12 midGrayBg bannerBox four1 noMargin bottomMargin" type="hidden">
+                        <%=if @texts.fourth then render partial: "featured_text", locals: {post: @texts.first, option: 4} end%>
+                    </div>
+
+
+                    <div class="section group">
+                        <div class="col span_4_of_12 ">
+                            <div class="section group">
+
+                                <%=if @posts[0] then render @posts.first.specific end%>
+
+                            </div>
+                            <div class="section group">
+
+                                <%=if @posts[1] then render @posts[1].specific end%>
+
+                            </div>
+                            <div class="section group">
+                                <div class="col span_12_of_12 sub questionBox darkGrayBg">
+                                    <div class="container">         
+                                        <span class="details"><span class="user floatLeft"><img class="user" src="http://i.imgur.com/BcMWkDq.jpg" /></span><span class="tag floatRight musculardystrophy">/MUSCULARDYSTROPHY</span></span></span>
+                                        <br>
+                                        <h3 class="white">How to best deal with an outburst?</h3>
+                                        <h4 class="lightGray">This is an example of a caption. I’m trying to include everything possible in this design. This is an example of a cap- tion. Everything possible in this design. Everything possible in this design. I’m trying to include everything possible.</h4>
+                                        <a href="" class="readMore underline">View answers &#8594;</a>
+                                        <hr>
+                                        <span class="details"><span class="favorite floatLeft"><img class="like" src="http://i.imgur.com/miqgxes.png" /></span><span class="comment floatLeft"><img class="comment" src="http://i.imgur.com/Swurq8A.png" /></span></span></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="col span_8_of_12">
+                            <div class="section group">
+                                <div class="col span_12_of_12 lightGrayBg sub">
+                                    <div class="col span_4_of_4 videoBoxBig noMargin one2" style="width: 100%;">
+
+                                        <%=if @videos.first then render partial: 'big_video', locals: {post: @videos.first, option: 1} end%>
+                                    </div>
+                                    <div class="col span_4_of_4 videoBoxBig noMargin two2" style="width: 100%;">
+                                        <%=if @videos.first then render partial: 'big_video', locals: {post: @videos.first, option: 2} end%>
+                                    </div>
+                                    <div class="col span_4_of_4 videoBoxBig noMargin three2" style="width: 100%;">
+                                        <%=if @videos.first then render partial: 'big_video', locals: {post: @videos.first, option: 3} end%>
+                                    </div>
+                                    <div class="col span_4_of_4 videoBoxBig noMargin four2" style="width: 100%;">
+                                        <%=if @videos.first then render partial: 'big_video', locals: {post: @videos.first, option: 4} end%>
+                                    </div>
+                                </div>
+                                <div class="section group">
+                                    <div class="col span_6_of_12">
+                                        <div class="section group">
+                                            <%=if @posts[2] then render @posts[2].specific end%>
+                                        </div>
+                                        <div class="section group">
+                                            <div class="col span_12_of_12 lightGrayBg">
+
+                                            </div>
+                                        </div>
+                                        <div class="section group">
+                                            
+                                        </div>
+                                    </div>
+                                    <div class="col span_6_of_12">
+                                        <div class="section group">
+                                            <div class="col span_12_of_12 lightGrayBg">
+                                                <%=if @posts[3] then render @posts[3].specific end%>
+                                            </div>
+                                        </div>
+                                        <div class="section group">
+                                            
+                                        </div>
+                                        <div class="section group">
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col span_3_of_12">
+                <div class="col span_12_of_12">
+                    <div class="section group">
+                        <%=if @posts[4] then render @posts[4].specific end%>
+                    </div>
+                    <div class="section group">
+                        <div class="col span_12_of_12 sub questionBox darkGrayBg">
+                            <div class="container">         
+                                <span class="details"><span class="user floatLeft"><img class="user" src="http://i.imgur.com/BcMWkDq.jpg" /></span><span class="tag floatRight musculardystrophy">/MUSCULARDYSTROPHY</span></span></span>
+                                <br>
+                                <h3 class="white">How to best deal with an outburst?</h3>
+                                <h4 class="lightGray">This is an example of a caption. I’m trying to include everything possible in this design. This is an example of a cap- tion. Everything possible in this design. Everything possible in this design. I’m trying to include everything possible.</h4>
+                                <a href="" class="readMore underline">View answers &#8594;</a>
+                                <hr>
+                                <span class="details"><span class="favorite floatLeft"><img class="like" src="http://i.imgur.com/miqgxes.png" /></span><span class="comment floatLeft"><img class="comment" src="http://i.imgur.com/Swurq8A.png" /></span></span></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="section group">
+                        <div class="col span_12_of_12 lightGrayBg videoBoxSmall noMargin">
+                            <div class="container">         
+                                <span class="details"><span class="user floatLeft"><img class="user" src="http://i.imgur.com/BcMWkDq.jpg" /></span><span class="tag floatRight musculardystrophy">/MUSCULARDYSTROPHY</span></span></span>
+                                <br>
+                                <h3 class="black">How to best deal with an outburst?</h3>
+                            </div>
+                            <div class="videoWrapper">
+                                <iframe class="video" src="https://www.youtube.com/embed/n_dZNLr2cME?rel=0&hd=1" frameborder="0" allowfullscreen></iframe>
+                            </div>
+                            <br>
+                            <div class="container">
+                                <span class="details"><span class="favorite floatLeft"><img class="like" src="http://i.imgur.com/miqgxes.png" /></span><span class="comment floatLeft"><img class="comment" src="http://i.imgur.com/CuI03R5.png" /></span></span></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="section group">
+                    <%=if @posts[5] then render @posts[5].specific end%>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+</div>
+
+</body>
