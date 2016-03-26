@@ -3,7 +3,10 @@ class PagesController < ApplicationController
   end
 
   def index2
-
+    @texts = TextPost.all
+    @images = ImagePost.all
+    @videos = VideoPost.all
+    @posts = (@texts + @images)
 
   end
 
