@@ -12,13 +12,13 @@
                         <%=if @texts.first then render partial: "featured_text", locals: {post: @texts.first, option: 1} end%>
                     </div>
                     <div class="col span_12_of_12 midGrayBg bannerBox two1 noMargin bottomMargin" type="hidden">
-                        <%=if @texts.second then render partial: "featured_text", locals: {post: @texts.second, option: 2} elsif @texts.first then render partial: "featured_text", locals: {post: @texts.first, option: 1} end%>
+                        <%=if @texts.second then render partial: "featured_text", locals: {post: @texts.second, option: 2} elsif @texts.first then render partial: "featured_text", locals: {post: @texts.first, option: 2} end%>
                     </div>
                     <div class="col span_12_of_12 midGrayBg bannerBox three1 noMargin bottomMargin" type="hidden">
-                        <%=if @texts.third then render partial: "featured_text", locals: {post: @texts.third, option: 3} elsif @texts.first then render partial: "featured_text", locals: {post: @texts.first, option: 1}  end%>
+                        <%=if @texts.third then render partial: "featured_text", locals: {post: @texts.third, option: 3} elsif @texts.first then render partial: "featured_text", locals: {post: @texts.first, option: 3}  end%>
                     </div>
                     <div class="col span_12_of_12 midGrayBg bannerBox four1 noMargin bottomMargin" type="hidden">
-                        <%=if @texts.fourth then render partial: "featured_text", locals: {post: @texts.first, option: 4} elsif @texts.first then render partial: "featured_text", locals: {post: @texts.first, option: 1} end%>
+                        <%=if @texts.fourth then render partial: "featured_text", locals: {post: @texts.first, option: 4} elsif @texts.first then render partial: "featured_text", locals: {post: @texts.first, option: 4} end%>
                     </div>
 
 
