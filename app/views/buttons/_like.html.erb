@@ -1,0 +1,15 @@
+<% if !user_signed_in?%>
+<%=link_to new_user_session_url do%>
+<img class="like" src="http://i.imgur.com/miqgxes.png" />
+<%end%>
+<% else %>
+<%if post.liked_by? current_user%>
+<%=link_to post_like_path(post.acting_as), remote: true, method: :put do%>
+<img class="liked" src="http://i.imgur.com/miqgxes.png" />
+<%end%>
+<% else%>
+<%=link_to post_like_path(post.acting_as), remote: true, method: :put do%>
+<img class="like" src="http://i.imgur.com/miqgxes.png" />
+<%end%>
+<%end%>
+<% end %>
