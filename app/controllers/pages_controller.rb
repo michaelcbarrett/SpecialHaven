@@ -3,14 +3,7 @@ class PagesController < ApplicationController
   end
 
   def index2
-    begin
-    @texts = TextPost.all
-    @images = ImagePost.all
-    @videos = VideoPost.all
-    @posts = (@texts + @images).sort_by {|s| s.created_at}
-  rescue
-    render text: "BLAHFADL"
-  end
+
   end
 
   def index
