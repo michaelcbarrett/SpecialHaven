@@ -1,25 +1,30 @@
 
 .bannerBoxText{
-	background-image: url('https://images.unsplash.com/photo-1457369804613-52c61a468e7d?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&w=1080&fit=max&s=f970569757f900368f1cf68f46cb92bb');
+	background-image: url('http://i.imgur.com/TjUQo0f.png');
 	height: auto;
-	background-size: cover;
 }
-.bannerBoxSpacing{
-	height: 110px;
+.bannerBoxDetailSpacing{
+	height: 24px;
 }
 .bannerBoxOverlay{
 	padding: 24px 0px;
 }
 h1.textPost{
-	font-size: 48px;
-	line-height: 125%;
-	margin: 24px 0px 36px 0px;
+	font-size: 32px;
+	line-height: 140%;
+	margin: 32px 0px;
+	font-weight: 600;
 }
-p{
-	font-family: 'Neuton', Times, serif;	
-	font-size: 24px;
-	font-weight: 200;
-	line-height: 150%;
+h3.textPost{
+	margin: 24px 0px 0px 0px;
+	letter-spacing: 1px;
+	font-size: 12px;
+}
+p.textPost{
+	font-family: 'Open Sans', Arial, sans-serif;	
+	font-size: 16px;
+	font-weight: 300;
+	line-height: 170%;
 }
 .container{
 	width: 75%;
@@ -29,18 +34,18 @@ span.date, span.time{
 }
 .detailsText{
 	font-family: 'Neuton', Times, serif;
-	font-size: 21px; 
+	font-size: 15px; 
 	font-weight: 200;
+	opacity: .8;
 }
 .tagsText{
 }
 .tag{
 	margin-right: 16px;
-	padding: 3px 6px;
-	border: 1px solid #88CCF1;
+	opacity: .8;
 }
 img.postedByPic{
-	height: 24px;
+	height: 18px;
 	border-radius: 100%;
 	border: 1px solid transparent;
 	cursor: pointer;
@@ -60,12 +65,13 @@ img.like{
 	height: 18px;
 }
 img.likeBig{
-	width: 24px;
-	height: 24px;
+	width: 21px;
+	height: 21px;
 }
 @media only screen and (max-width: 720px) {
 	h1.textPost{
-		font-size: 36px;
+		font-size: 32px;
+		font-weight: 600;
 	}
 	.detailsText{
 		font-size: 15px;
@@ -83,10 +89,11 @@ img.likeBig{
 	.tagsText{
 		font-size: 
 	}
-	p{
-		font-size: 21px;
+	p.textPost{
+		font-size: 17px;
+		line-height: 170%;
 	}
-	.container{
+	.container, .containerSmall{
 		width: 90%;
 	}
 	.bannerBoxSpacing{

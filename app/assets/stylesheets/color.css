@@ -32,6 +32,11 @@
 	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='.myBackground.jpg', sizingMethod='scale');
 	-ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='myBackground.jpg', sizingMethod='scale')";
 	}
-.autism{color: #88CCF1; border-color: #88CCF1}
+.autism{color: #88CCF1;}
 .musculardystrophy{color: #45CB85;}
 
+
+
+.bg1{
+	background-image: url('http://i.imgur.com/FAFfNa0.png');
+}

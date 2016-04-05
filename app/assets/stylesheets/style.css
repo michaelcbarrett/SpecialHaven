@@ -87,16 +87,15 @@ a.noAccount:hover{background-color: rgba(255,255,255,1);}
 	padding: 0px 0px;
 }
 .one1{
-	background-image: url('https://images.unsplash.com/photo-1457369804613-52c61a468e7d?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&w=1080&fit=max&s=f970569757f900368f1cf68f46cb92bb');
+	background-image: url('http://i.imgur.com/FAFfNa0.png');
 }
 .bannerBoxOverlay{
 	height: auto;
 	padding: 16px 0px 20px 0px;
 	position: relative;
-	background-color: rgba(0,0,0,.6);
 }	
 .bannerBoxSpacing{
-	height: 100px;
+	height: 110px;
 	width: 100%;
 }
 /* containers */
@@ -115,6 +114,12 @@ a.noAccount:hover{background-color: rgba(255,255,255,1);}
 .containerPopUp{
 	position: relative;
 	width: 65%;
+	margin: auto;
+	height: auto;
+}
+.containerSmall{
+	position: relative;
+	width: 70%;
 	margin: auto;
 	height: auto;
 }
@@ -407,8 +412,8 @@ img.liked{
 	opacity: .99;
 }
 img.likeBig{
-	width: 24px;
-	height: 24px;
+	width: 21px;
+	height: 21px;
 }
 img.like:hover, img.comment:hover{
 	opacity: .99;
@@ -450,6 +455,9 @@ img.postType{
 	}
 	.textOptionType:hover{
 		opacity: 1;	
+	}
+	.containerSmall{
+		width: 85%;
 	}
 
 }

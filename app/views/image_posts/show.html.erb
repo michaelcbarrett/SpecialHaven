@@ -14,10 +14,10 @@
                 <hr>
                 <br>
                 <span class="detailsText darkGray">Posted by<img class="postedByPicImage" src="http://i.imgur.com/BcMWkDq.jpg" />on<span class="black date"><%=@post.created_at.strftime("%B %-d, %Y")%></span>at<span class="black time"><%=@post.created_at.strftime("%I:%M %p")%></span></span>
-                <h1 class="black imagePost"><%=@post.title%></h1>
 
             </div>
             <div class="container textCenter newContainer">
+                <h1 class="black textCenter imagePost"><%=@post.title%></h1>
                 <img class="image" align="center" src="<%=@post.image_url%>" />
                 <span class="tagsText midGray">
                 <%@post.tag_list.each do |t|%>
@@ -25,7 +25,7 @@
                 <%end%>
                 </span>
             </div>
-            <div class="container">
+            <div class="containerSmall textCenter">
 
                 <p class="darkGray"><%=@post.body%></p>
                 <hr><br>
