@@ -1,5 +1,18 @@
 $( document ).ready(function() {
+	$(".optionPopUp").hide();
 	$("#newpost").click(function(event){
-		$("#newpost").replaceWith('<a href="<%=Rails.application.routes.url_helpers.new_text_post_path%>"><button type="submit" style="background-color:#88CCF1" class="postButton" id="newpost">NEW TEXT POST</button></a> <a href="<%=Rails.application.routes.url_helpers.new_image_post_path%>"><button style="background-color:#45CB85" class="postButton" id="newpost">NEW IMAGE</button></a> <a href="<%=Rails.application.routes.url_helpers.new_video_post_path%>"><button class="postButton" id="newpost">NEW VIDEO</button></a> <a href="<%=Rails.application.routes.url_helpers.new_link_post_path%>"><button style="background-color:#BD90D4" class="postButton" id="newpost">NEW LINK</button></a>')
+		$(".optionPopUp").slideToggle();
 	})
+	document.getElementById("linkToText").onclick = function () {
+        location.href = "<%=Rails.application.routes.url_helpers.new_text_post_path%>";
+    };
+    document.getElementById("linkToImage").onclick = function () {
+        location.href = "<%=Rails.application.routes.url_helpers.new_image_post_path%>";
+    };
+ 	document.getElementById("linkToVideo").onclick = function () {
+        location.href = "<%=Rails.application.routes.url_helpers.new_video_post_path%>";
+    };
+    document.getElementById("linkToLink").onclick = function () {
+        location.href = "<%=Rails.application.routes.url_helpers.new_link_post_path%>";
+    };
 });

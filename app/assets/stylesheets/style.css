@@ -2,13 +2,13 @@
 /* text types */
 h1{font-family: 'Open Sans', Arial, sans-serif; margin: 0; font-size: 32px; line-height: 120%;}
 h2{font-family: 'Neuton', serif; margin: 5px 0px 10px 0px; font-size: 24px; font-weight: 200; line-height: 120%;}
-h3{font-family: 'Open Sans', Arial, sans-serif; margin: 8px 0px 2px 0px; font-size: 16px; line-height: 130%; font-weight: 600;}
+h3{font-family: 'Open Sans', Arial, sans-serif; margin: 8px 0px 2px 0px; font-size: 16px; line-height: 130%; font-weight: 700;}
 h4{font-family: 'Neuton', serif; font-size: 16px; margin: 2px 0px 6px 0px; line-height: 120%; font-weight: 200;}
 h5{font-family: 'Open Sans', Arial, sans-serif; margin: 0; font-size: 12px;}
 h6{font-family: 'Open Sans', Arial, sans-serif; font-size: 10px;}
 
 /* links */
-a, a:hover, a:visited, a:active{text-decoration: none; outline: none; color: inherit;}
+a, a:hover, a:visited, a:active{text-decoration: none; outline: none; color: inherit; margin: 0;}
 a.underline:hover{text-decoration: underline; color: inherit;}
 a.readMore{font-family: 'Raleway', serif; font-size: 15px; margin: 15px 0px 0px 0px; font-weight: 700; color: #428bca;}
 a.noAccount{font-family: 'Open Sans', sans-serif; font-size: 13px; margin: 24px 0px 0px 0px; font-weight: 400; padding: 6px 10px; border: 1px solid #ffffff; background-color: rgba(255,255,255,.8);}
@@ -112,6 +112,12 @@ a.noAccount:hover{background-color: rgba(255,255,255,1);}
 	margin: auto;
 	height: auto;
 }
+.containerPopUp{
+	position: relative;
+	width: 65%;
+	margin: auto;
+	height: auto;
+}
 .fixed{
 	position: fixed;
 }
@@ -134,6 +140,9 @@ a.noAccount:hover{background-color: rgba(255,255,255,1);}
 	color: #428bca;
 	text-transform: uppercase;
 	cursor: pointer;
+}
+.postIcon{
+	height: 16px
 }
 .buddyButton:hover{
 	background-color: #f6f7f7;
@@ -292,7 +301,19 @@ header{
 	z-index: 1;
 	background-color: #ffffff;
 }
-
+/* new post */
+.optionPopUp{
+	width: 100%;
+	padding: 32px 0px 64px 0px;
+	z-index: 1;
+	position: fixed;
+	margin-top: -8px;
+	background-color: white;
+}
+.optionPopUp h3{
+	letter-spacing: 1px;	
+	font-size: 13px;
+}
 /* images */
 img.user{
 	height: 16px;
@@ -383,3 +404,36 @@ img.option{
 	margin-left: 4px;
 	cursor: pointer;
 }
+img.postType{
+	height: 128px;
+}
+.optionType{
+	padding: 48px 0px;
+	opacity: .7;
+	cursor: pointer;
+}
+.optionType:hover{
+	opacity: 1;
+}
+.textOptionType{
+	cursor: pointer;
+}
+
+@media only screen and (max-width: 720px) {
+	.hide{
+		display: none;
+	}
+	.centerMobile{
+		text-align: center;
+	}
+	.textOptionType{
+		background-color: #f6f7f7;
+		opacity: .7;
+		padding: 8px 0px 12px 0px;
+	}
+	.textOptionType:hover{
+		opacity: 1;	
+	}
+
+}
+
