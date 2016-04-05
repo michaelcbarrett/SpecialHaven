@@ -7,7 +7,7 @@
             <span class="profileOptionSpan">
                 <img class="profileOptions" src="http://i.imgur.com/CHfZqFg.png" />
                 <img class="profileOptions" src="http://i.imgur.com/wHttvYx.png" />
-                <img class="profileOptions" src="http://i.imgur.com/8Mc7Wum.png" />
+                <a href='<%= link_to "Log Out", destroy_user_session_path, :method => 'delete'%>'><img class="profileOptions" src="http://i.imgur.com/8Mc7Wum.png" /></a>
             </span>
     </div>
 </header>
