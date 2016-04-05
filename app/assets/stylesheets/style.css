@@ -357,6 +357,21 @@ img.profilePic{
 img.profilePic:hover{
 	border: 1px solid #2B71AD;
 }
+img.profileOptions{
+	height: 24px;
+	border-radius: 100%;
+	border: 1px solid transparent;
+	cursor: pointer;
+	-webkit-transition: all .4s ease;
+	-moz-transition: all .4s ease;
+	-ms-transition: all .4s ease;
+	-o-transition: all .4s ease;
+	transition: all .4s ease;
+	vertical-align: middle;
+}
+img.profileOptions:hover{
+	border: 1px solid #d1d2d4;
+}
 img.profilePagePic{
 	height: 144px;
 	border-radius: 100%;

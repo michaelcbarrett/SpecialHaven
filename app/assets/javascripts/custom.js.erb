@@ -1,8 +1,11 @@
 $( document ).ready(function() {
 	$(".optionPopUp").hide();
-	
+	$(".profileOptionSpan").hide();
 	$("#newpost").click(function(event){
 		$(".optionPopUp").slideToggle();
+	})
+	$(".profilePic").click(function(event){
+		$(".profileOptionSpan").toggle();
 	})
 	document.getElementById("linkToText").onclick = function () {
         location.href = "<%=Rails.application.routes.url_helpers.new_text_post_path%>";
