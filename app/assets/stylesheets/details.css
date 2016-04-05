@@ -262,7 +262,7 @@ select.signup{
 		height: 55px;
 	}
 	.loginBoxSpacing, .profileBoxSpacing{
-		height: 25px;
+		height: 24	px;
 	}
 	.about{
 		display: none;
@@ -284,5 +284,8 @@ select.signup{
 	}
 	h3.login{
 		font-size: 13px;
+	}
+	a.noAccount{
+		font-size: 14px;
 	}
 }

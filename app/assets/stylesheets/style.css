@@ -11,8 +11,11 @@ h6{font-family: 'Open Sans', Arial, sans-serif; font-size: 10px;}
 a, a:hover, a:visited, a:active{text-decoration: none; outline: none; color: inherit;}
 a.underline:hover{text-decoration: underline; color: inherit;}
 a.readMore{font-family: 'Raleway', serif; font-size: 15px; margin: 15px 0px 0px 0px; font-weight: 700; color: #428bca;}
-a.noAccount{font-family: 'Open Sans', sans-serif; font-size: 13px; margin: 24px 0px 0px 0px; font-weight: 400; padding: 6px 10px; border: 1px solid #ffffff; background-color: rgba(255,255,255,.8);}
-a.noAccount:hover{background-color: rgba(255,255,255,1);}
+a.noAccount{
+	font-family: 'Open Sans', sans-serif; color: #ffffff; font-size: 21px; margin: 24px 0px 0px 0px; font-weight: 600; 	}
+a.noAccount:hover{
+	color: white;
+}
 .thinner{
 	font-weight: 200;
 }
@@ -382,4 +385,11 @@ img.option{
 	height:8px;
 	margin-left: 4px;
 	cursor: pointer;
+}
+@media only screen and (max-width: 720px){
+	a.noAccount{
+		font-size: 15px;
+		font-weight: 300;
+	}
+
 }
