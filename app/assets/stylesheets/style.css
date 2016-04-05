@@ -309,6 +309,8 @@ header{
 	position: fixed;
 	margin-top: -8px;
 	background-color: white;
+	-webkit-box-shadow: 0 30px 45px 0 rgba(0,0,0,.5);
+box-shadow: 0 30px 45px 0 rgba(0,0,0,.5);
 }
 .optionPopUp h3{
 	letter-spacing: 1px;	
