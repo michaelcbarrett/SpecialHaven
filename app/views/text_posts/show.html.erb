@@ -1,8 +1,5 @@
 <body>
 
-<div class="navSpacing"></div>
-
-
     <div class="section group">
 
         <div class="col span_12_of_12 bannerBoxText bg1">
@@ -27,7 +24,7 @@
                     <h3 class="bolder textPost">TEXT POST</h3>
                     <p class="textPost darkGray"><%=@post.body%></p>
                     <br>
-                    <span class="details"><span class="favorite floatLeft"><img class="like likeBig" src="http://i.imgur.com/miqgxes.png" /></span></span></span>
+                    <span class="details"><%=render partial: "buttons/like", locals: {post: @post}%></span>
                 </div>
             </div>
         </div>
