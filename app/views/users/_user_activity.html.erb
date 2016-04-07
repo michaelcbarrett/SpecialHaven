@@ -1,0 +1,14 @@
+<div class="col_ns span_12_of_12 activityFeed">
+	<div class="profileContainerPage">
+		<%if activity.class.name.demodulize == "Post"%>
+		<span class="profilePostType"><span class="profilePosted">Posted</span><%=activity.specific.class.name.titleize.upcase%></span>
+		<h1 class="profileFont" onClick="location.href = '<%=url_for(activity.specific)%>'"><%=truncate(activity.body, length: 140, omission: "...")%></h1>
+		<span class="profilePageTag musculardystrophy"><%=activity.tag_list[0]%></span>
+		<%elsif activity.class.name.demodulize == "Like"%>
+		<span class="favorite"><img class="profileLikes" src="http://i.imgur.com/miqgxes.png" /></span><span class="profilePostType">activity.specific.class.name.titleize.upcase</span>
+		<h1 class="profileFont" onClick="location.href = '<%=url_for(activity.post.specific)%>'">><%=truncate(activity.post.body, length: 140, omission: "...")%></h1>
+		<span class="profilePageTag musculardystrophy"><%=activity.post.tag_list[0]%></span>
+		<% end %>
+		
+	</div>
+</div>
