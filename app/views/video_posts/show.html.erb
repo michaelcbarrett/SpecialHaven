@@ -1,7 +1,6 @@
 
 <body class="lightGrayBg">
 
-<div class="navSpacing"></div>
 
 <div class="containerPage newContainer">
 
@@ -31,7 +30,7 @@
                 <p class="darkGray"><%=@post.body%></p>
                 <hr>
                 <br>
-                <span class="details"><span class="favorite floatLeft"><img class="like likeBig" src="http://i.imgur.com/miqgxes.png" /></span></span></span>
+                <span class="details"><span class="favorite floatLeft"><%=render partial: "buttons/like", locals: {post: @post}%></span></span></span>
 
 
             </div>
