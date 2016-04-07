@@ -11,7 +11,32 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160121010541) do
+ActiveRecord::Schema.define(version: 20160407175210) do
+
+  create_table "comment_likes", force: :cascade do |t|
+    t.integer  "user_id"
+    t.integer  "comment_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "comment_likes", ["comment_id"], name: "index_comment_likes_on_comment_id"
+  add_index "comment_likes", ["user_id"], name: "index_comment_likes_on_user_id"
+
+  create_table "comments", force: :cascade do |t|
+    t.string   "title",            limit: 50, default: ""
+    t.text     "comment"
+    t.integer  "commentable_id"
+    t.string   "commentable_type"
+    t.integer  "user_id"
+    t.string   "role",                        default: "comments"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "comments", ["commentable_id"], name: "index_comments_on_commentable_id"
+  add_index "comments", ["commentable_type"], name: "index_comments_on_commentable_type"
+  add_index "comments", ["user_id"], name: "index_comments_on_user_id"
 
   create_table "event_posts", force: :cascade do |t|
     t.datetime "event_start_time"
@@ -111,6 +136,7 @@ ActiveRecord::Schema.define(version: 20160121010541) do
     t.string   "provider"
     t.string   "uid"
     t.string   "photo"
+    t.text     "bio"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true

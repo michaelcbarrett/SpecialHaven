@@ -6,6 +6,7 @@ class UsersController < ApplicationController
 
 	def show
 		@user = User.find(params[:id])
+		@activity = (current_user.liked_posts + current_user.posts).sort_by {|s| s.created_at}
 	end
 
 	def request_friend

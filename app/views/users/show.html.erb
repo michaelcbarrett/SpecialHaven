@@ -1,10 +1,71 @@
-<h1><%= "#{@user.first_name} #{@user.last_name}"%></h1>
-<img src="<%= @user.photo %>" alt="User Profile Picture" width="100" height="100">
-<p>Email: <%=@user.email%></p>
-<p>Role: <%=@user.user_type%></p>
-<p>Posts:</p>
-<ul class="timeline">
-<% @user.posts.reverse.each do |post| %>
-<%= render post.specific %>
-<% end %>
-</ul>
+<body class="lightGrayBg">
+
+<div class="profileActivityContainer newContainer">
+
+    <div class="section group">
+
+        <div class="col span_12_of_12">
+            <div class="profileContainer textCenter">
+                <div class="profileBoxSpacing">
+                </div>
+                <img class="profilePagePic" src="<%=@user.photo%>" /><br>
+                <input type="button" class="profileAddBuddy profile" value="+ ADD BUDDY"/>
+                <h1 class="black profilePage"><%="#{@user.first_name} #{@user.last_name}"%></h1>
+                <div class="containerPage"><h2 class="thin darkGray profilePage"><%=@user.bio%></h2></div>
+                <span class="userTypeTag"><%=@user.user_type%></span>
+                <br><br>
+                <hr>
+            </div>
+        </div>
+    </div>
+    <div class="section group">
+        <div class="col span_12_of_12 textCenter">
+            <h4 class="darkBlue bold topSpace">ACTIVITY</h4>
+        </div>
+    </div>
+
+    <div class="section group">
+        <div class="pageContainer">
+        <%@activity.first(18).in_groups(3) do |group|%>
+            <div class="col span_4_of_12">
+                <div class="section group">
+                    <%=render partial: "user_activity", collection: group, as: "activity"%>
+                </div>
+            </div>
+            <% end%>
+        </div>
+    </div>
+
+</div>
+
+<div class="navSpacing"></div>
+
+</body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
