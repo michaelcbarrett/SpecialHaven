@@ -6,7 +6,7 @@ class PagesController < ApplicationController
     @texts = TextPost.all
     @images = ImagePost.all
     @videos = VideoPost.all
-    @posts = (@texts + @images)
+    @posts = (@texts + @images).shuffle
 
   end
 
